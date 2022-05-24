@@ -1,0 +1,441 @@
+/* @import url("../css-reset/reset.css"); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+
+*{
+    top: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --fontI: #163369;
+    --fontII: #0000D4;
+    --color1: #36E2DD;
+    --color2: #FFE035;
+    --color3: #FFA777;
+    --color4: #F47F2C;
+    --color5: #FFC814;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+section{
+    padding: 2rem 7%;
+}
+.btn-conferir{
+    padding: .5rem;
+    width:100px;
+    background: var(--color2);
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: .2rem solid #f9f9f9;
+    margin: center;
+}
+.btn-conferir:hover{
+    border:.2rem solid #fff;
+    box-shadow: 0 0 10px 2px gold;
+}
+.btn-nav{
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 2.5rem;
+    padding: .5rem;
+    color: #fff;
+   
+}
+
+#preco-box{
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--fontI);
+    font-weight: 700;
+}
+
+
+
+.btn-nav{
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+
+header {
+    background: var(--color1);
+    padding: 1rem;
+    border: .2px;
+    border-bottom: 3px solid rgba(255,255,255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .links-ul {
+    position: relative;
+    width: 100px;
+    z-index: 1000;
+    display: flex;
+}
+header .links-ul li{
+    list-style: none;
+    padding: .5rem 0;
+}
+header .links-ul li a{
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0 10px;
+}
+
+
+
+            /* inicio da home  */
+img{
+     border-radius: 20px;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url("../imagens/lucas-silva--FeJsNxI4wQ-unsplash.jpg") center/cover no-repeat;
+}
+.home .titulo{
+   width: 100%; 
+   text-align: center;
+  
+}
+.home  .em-alta img{
+    width: 100%;
+    padding: 0 1rem;
+}
+.home .titulo h1{
+    width: 100%;
+    font-size: 4.5rem;
+    color: #fff;
+    line-height: 1rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+
+}
+.home .titulo p{
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-decoration: underline;
+    text-align: center;
+    color: #fff;
+}
+
+.home .promo{
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255, .9);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 4rem;
+}
+.home .promo h3{
+    color: #fff;
+    background: #990D00;
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: .5rem;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+.home .promo span{
+    color: #990D00;
+    background-color: #fff;
+    border-radius: .3rem;
+    padding: .4rem;
+}
+.promo .ss{
+    margin-top: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: .5rem;
+    
+}
+ #promocoes{
+     background: linear-gradient( #26ade4, #ffd952);
+     height: 100%;
+     padding: 0;
+    }
+ #promocoes .conteudo{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: .2rem 2rem ;
+
+ } 
+ #promocoes .conteudo h2{
+     font-size:4rem;
+     font-weight: 700;
+     color: #fff;
+ }
+ #promocoes .conteudo span{
+     color: #fbd706;
+     text-transform: capitalize;
+ }
+
+
+ #promocoes .display-promo{
+     display: flex;
+    width: 100%;
+    padding:1.5rem;
+    border: .2rem solid rgba(0,0,0, .1);
+    border-radius: 1.5rem;
+    overflow-x: scroll;
+    background: #e7e7e7;
+    text-align: -webkit-center;
+ }
+ .box img{
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    border-radius: none;
+}
+ #promocoes .display-promo .box{
+     padding: 2rem .5rem;
+     margin: 0 1rem;
+     border: .2rem solid rgba(0,0,0, .1);
+     border-radius: 1rem;
+     background: #fff;
+     width: 30rem;
+     height: auto;
+     gap: 2rem;
+     /* position: relative; */
+
+    }
+    #promocoes .display-promo .box:hover{
+     cursor: pointer;
+     border:  .2rem solid #990D00;
+ }
+ #promocoes .display-promo .box h2{
+     margin-top: -20px;
+     position: relative;
+     color: #fff;
+     background: var(--color1);
+     font-size: 1.8rem;
+     font-weight: bold;
+     padding: 1rem;
+     border-radius: 10px;
+     width: min-content;
+     top: 0;
+ }
+
+#promocoes .display-promo .context-box p{
+     border-radius: 5px;
+     padding: .2rem;
+     /* text-align: center; */
+    font-size: 1.4rem;
+     color: #000;
+     font-weight:500 ;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    display:flex;
+    width: 100%;
+    background: var(--color1);
+    justify-content: space-evenly;
+  
+    
+}
+footer h2{
+    font-size: 3rem;
+    color: #2F1C6A;
+    text-align: center;
+    margin: 1rem;
+}
+
+footer ul{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: end;
+    
+}
+ul li{
+    list-style: none;
+    padding: 1rem;
+    
+}
+li a{
+   
+    font-size: 1.5rem;
+    color: #2F1C6A;
+}
+ .nav li a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.redes{
+    text-align: center;
+}
+.redes i{
+    padding-left: 1rem;
+    margin-top: .5rem;
+    font-size: 3rem;
+   
+    
+}
+
+
+
+
+
+/* media responsive */
+
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .home .titulo h1{
+        font-size: 4.5rem;
+        line-height: .5rem;
+        letter-spacing: .2rem;
+        
+    }
+
+}  
+@media(max-width: 810px) {
+    
+    section{
+        top: 100%;
+        padding: 15rem 5%;
+    }
+          header{
+        height: 50px;
+        }
+        .btn-nav{
+            display: inline;
+        }
+        header #links{
+            display: none;
+            background: var(--color1);
+            top: 50px; right: 0;
+            width: 150px;
+            border-radius: 0 0 0 15px;
+        }
+       
+        header #links.active{
+    
+            display: inline-block;
+            position: absolute;
+            padding:2rem;
+        }
+    .home{
+        background-position: right;
+        display: block; 
+    }
+    .home .promo{
+   
+        width: 100%;
+        border-radius: 20px;
+        padding:  1rem 2rem;
+    }
+    
+    .home .promo img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /* reduzir ou retirar o avião do container #promocoes em 780px */
+   
+    #promocoes .display-promo .box{
+        max-width: 100%;
+        padding: 1rem .5rem;
+        
+    }
+ 
+    #promocoes .display-promo .box h2{
+        font-size: 2rem;
+    }
+    footer{
+        display: block;
+        padding-bottom: 2rem;
+    }
+    footer ul{
+        /* text-align: center; */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+}
+@media(max-width: 425px){
+    .home .promo img{
+        padding: 1rem 0;
+        object-fit: cover;
+    }
+   
+    .home .promo{
+        padding: 2rem;
+        border-radius: 1rem;
+        margin-top: 3rem;
+    }
+    .home .promo h3, span{
+        font-size: 1.6rem;
+    }
+    footer .nav ul{
+        display: block;
+        text-align: center;
+    }
+    #promocoes .conteudo h2{
+        font-size:2.5rem;
+    } 
+    
+    footer ul li{
+    padding: .3rem 0;
+    }
+
+}
+@media(max-width: 390px){
+    .home .titulo h1{
+        font-size: 3.5rem;
+    }
+    .home .promo h3{
+        
+        padding: 1rem 1rem;
+    }
+    
+    
+}
+ 
