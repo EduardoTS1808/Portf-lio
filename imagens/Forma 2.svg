@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="572.5" viewBox="0 0 1080 572.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #edc37a;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 20px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forma_2" data-name="Forma 2" class="cls-1" d="M-126,746c39.657-8.944,78.435-16.354,117.816-22.49,25.391-3.956,50.7-6.988,76.056-9.521,105.27-10.519,312.179-8.834,500.643,12.879C776.292,750.806,964.188,781.805,1064,676c17.16-18.192,36.07-44.517,52-40,32.25,9.144,13.69,150.941,5,320-3.97,77.27-5.28,153.63-4,232" transform="translate(0 -625.5)"/>
+</svg>
