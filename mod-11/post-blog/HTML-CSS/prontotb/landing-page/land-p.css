@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Roboto:wght@100;400;900&display=swap');
+
+
+
+/* paleta azul principal*/
+*{
+    box-sizing: border-box;
+   
+   
+    
+}
+html{
+    font-size: 62,5%;
+    font-family:  'Roboto', sans-serif;
+    background: #fed005ea;
+    
+}
+
+/* o root está com algo errado na declaração */
+ :root {
+     --color1: #2185e2;
+     --color2 :#01132b;
+     --color3 :#6192e0;
+     --color4 :#0b059c;
+     --color5 :#000081;
+    }
+
+
+#banner{
+    position: relative;
+    background: url("../images/aleksi-raisa-y-BIhyjjHv4-unsplash.jpg") center/cover no-repeat;
+    width: 100%;
+    height:100vh;
+    display: block;
+}
+#contexto{
+    height: min-content;
+    width: 60%;
+    padding: 50px 0 0 50px;
+}
+#contexto .texto{
+    font-size: 3.44rem;
+    color: #fff;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    border-top: 2px  solid rgba(254, 229, 5, 0.979);
+    border-left: 2px  solid rgba(254, 229, 5, 0.979);
+    text-transform: uppercase;
+    padding: 30px;
+    line-height: 1.5;
+}
+h3{
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px ;
+    font-weight: 700;   
+    font-family: 'Opens Sans';
+}
+#banner .btn{
+    background: transparent;
+    width: min-content;
+    padding: 1.5rem;
+    margin-top: 700px ;
+    margin-left: 80%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 7px rgba(255,255,255,.5);
+}
+ .btn a{
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  
+    /* border-radius: 20px; */
+}
+.btn a:hover{
+    color: rgba(254, 229, 5, 1);
+}
+
+
+
+#banner-2{
+    background-color: #01132b;
+    padding: 2rem;
+    margin:20px  0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.container-img img{
+    border-radius: 14px;
+}
+
+
+
+
+
+.texto-2{
+    /* background: rgba(255,255,255,.1); */
+    background: transparent;
+    padding: 1rem;
+    line-height: 1.3;
+    border-right: 2px solid rgba(254, 229, 5, 0.979);
+    border-bottom: 2px solid rgba(254, 229, 5, 0.979);
+    margin: 0 0 0 15px;
+    height: 100%;
+}
+.texto-2 p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+
+.form{
+    background-color: var(--color2);
+}
+.form-container{
+   padding: 3rem 0 ;
+
+}
+
+
+.cog-form__container{
+    padding: 10px !important;
+    margin: 25px 0 !important;
+    border-radius: 10px !important;
+}
+.cog-form__content{
+    padding: 5px !important;
+}
+footer{
+    background: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+}
+footer p{
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(254, 229, 5, 0.979);
+}
