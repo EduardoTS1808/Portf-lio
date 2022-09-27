@@ -2,30 +2,22 @@
 
 
 
-/* paleta azul principal*/
 *{
-    box-sizing: border-box;
-   
-   
-    
+    box-sizing: border-box; 
 }
 html{
     font-size: 62,5%;
     font-family:  'Roboto', sans-serif;
-    background: #fed005ea;
-    
+    background: #fff;
 }
-
-/* o root está com algo errado na declaração */
+/* paleta azul principal*/
  :root {
      --color1: #2185e2;
      --color2 :#01132b;
      --color3 :#6192e0;
      --color4 :#0b059c;
-     --color5 :#000081;
+     --color5 :#000;
     }
-
-
 #banner{
     position: relative;
     background: url("../images/aleksi-raisa-y-BIhyjjHv4-unsplash.jpg") center/cover no-repeat;
@@ -33,52 +25,79 @@ html{
     height:100vh;
     display: block;
 }
-#contexto{
-    height: min-content;
-    width: 60%;
-    padding: 50px 0 0 50px;
-}
 #contexto .texto{
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    width: calc(100% - 10%);
+    height:max-content;
     font-size: 3.44rem;
     color: #fff;
-    font-family: 'Open Sans';
+    padding: 2rem  ;
     font-weight: 500;
-    border-top: 2px  solid rgba(254, 229, 5, 0.979);
-    border-left: 2px  solid rgba(254, 229, 5, 0.979);
-    text-transform: uppercase;
-    padding: 30px;
-    line-height: 1.5;
+    text-transform: uppercase ;
+    transition: .5s;
+    border-radius: 1.5rem;
+    
 }
-h3{
-    font-size: 4rem;
+#contexto .texto::before{
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -1px;
+    width: 50px;
+    height: 50px;
+    border-top: 4px solid #fee505fa;
+    border-left: 4px solid #fee505fa;
+    transition:.5s ;
+    transition-delay: .5s;
+}
+#contexto .texto::after{
+    position: absolute;
+    content: "";
+    right: -1px;
+    bottom: -1px;
+    width: 50px;
+    height: 50px;
+    border-right: 4px solid #fee505fa;
+    border-bottom: 4px solid #fee505fa;
+    transition:.5s ;
+    transition-delay: .5s;
+}
+#contexto .texto:hover::before,
+#contexto .texto:hover::after{
+    width: 70%;
+    height: 50%;
+    transition-delay: 0s;
+}
+
+ #btn {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    display: flex;
+    background: var(--color4) ;
+    border-radius: 2rem;
+    /* border: 10px solid rgba(255,255,255, .5); */
+    box-shadow: 3px 1px 10px rgba(255,255,255, 0.5);
+ }
+   a{
+    font-size: 3rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
     color: #fff;
-    cursor: pointer;
-    margin-left: 20px ;
-    font-weight: 700;   
-    font-family: 'Opens Sans';
-}
-#banner .btn{
-    background: transparent;
-    width: min-content;
-    padding: 1.5rem;
-    margin-top: 700px ;
-    margin-left: 80%;
-    border-radius: 10px;
-    box-shadow: 2px 3px 7px rgba(255,255,255,.5);
-}
- .btn a{
-    font-size: 3.5rem;
     text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-  
-    /* border-radius: 20px; */
-}
-.btn a:hover{
-    color: rgba(254, 229, 5, 1);
-}
+    font-weight: 400;
+    text-transform: uppercase;
 
-
+ }
+#btn:hover a{
+    box-shadow: 5px 1px 20px #fff ;
+    /* filter:invert(50%); */
+    /* background: #d09a08f1; */
+    background: #F9F871;
+    color: var(--color4);
+}
 
 #banner-2{
     background-color: #01132b;
@@ -90,13 +109,6 @@ h3{
     justify-content: space-between;
 
 }
-.container-img img{
-    border-radius: 14px;
-}
-
-
-
-
 
 .texto-2{
     /* background: rgba(255,255,255,.1); */
@@ -105,7 +117,7 @@ h3{
     line-height: 1.3;
     border-right: 2px solid rgba(254, 229, 5, 0.979);
     border-bottom: 2px solid rgba(254, 229, 5, 0.979);
-    margin: 0 0 0 15px;
+    margin: 0 15px 0 0;
     height: 100%;
 }
 .texto-2 p{
@@ -113,9 +125,36 @@ h3{
     color: #fff;
     font-weight: 300;
 }
+.container-img img{
+    border-radius: 14px;
+}
+.container{
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+.container .img-perg {
+    position: relative; 
+    width: 500px;
+    height: 380px;
+    background: url("../images/dylan-calluy-moL-kDg0y3w-unsplash.jpg") center/cover no-repeat ;
+    border-radius: 1rem;
+    margin-right: 120px;
+}
 
-
-
+.container .perguntas dt{
+    font-size: 2rem;
+    font-weight: 500;
+    /* color: #a0f0f0; */
+    color: #002866;
+    margin-bottom: .5rem;
+}
+.container .perguntas dd{
+    font-size: 1.5rem;
+    /* color: #fff; */
+    color: var(--color3);
+    margin-bottom: 1.5rem;
+}
 .form{
     background-color: var(--color2);
 }
@@ -144,5 +183,91 @@ footer{
 footer p{
     color: #fff;
     padding-bottom: 5px;
-    border-bottom: 2px solid rgba(254, 229, 5, 0.979);
+    border-bottom: 2px solid rgba(254, 229, 5, 0.979)
+}
+
+
+/* RESPONSSÍVEL */
+
+@media(max-width:1200px){
+    #banner{
+        margin: 0;
+        top: 0;
+        left: 0;
+        background-position: left;
+    }   
+    #contexto .texto{
+        font-size: 2.44rem;
+    }
+    #btn  a{
+        font-size: 2rem;
+     }
+     #banner-2 p{
+        font-size: 1.2rem;
+     }
+     .container-img img{
+        /* border-radius: 14px; */
+        height: 300px;
+        width: 400px;
+    }
+    .container .perguntas dt{
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    .container .perguntas dd{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+     
+    .container .img-perg {
+        margin-right: 90px;
+    }
+
+}
+
+@media(max-width:800px){
+    #banner{
+        height: calc(100vh - 200px);
+    }   
+    #contexto .texto{
+        font-size: 2rem;
+    }
+    #btn  a{
+        font-size: 1rem;
+     }
+     #banner-2 {
+        display: block;
+     }
+     .container-img img{
+        height: 200px;
+        width: 300px;
+        margin-top: 20px;
+    }
+}
+@media(max-width:680px) {
+    .container .img-perg {
+        position: relative; 
+        width: 300px;
+        height: 280px;
+        border-radius: 1rem;
+        margin-right: 34px;
+    
+    }
+    .container .perguntas dt{
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+    .container .perguntas dd{
+        font-size: .7rem;
+        margin-bottom: 1rem;
+    }
+}
+@media(max-width:440px){
+    #banner-2 p{
+        font-size: 1rem;
+    }
+    #contexto .texto{
+        font-size: 1.6rem;
+    }
+
 }
