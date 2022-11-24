@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style/custom2.css">
+    <title>Projeto Com Bootstrap 2</title>
+</head>
+<body >
+   <header>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top ">
+      <div class="container-fluid mx-2" >
+        <div class="logo fw-bold" data-logoA="bottom"><i class="bi bi-shop"></i> Candy Store</div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-1">
+            <li class="nav-item fs-2 fw-semibold">
+              <a class="nav-link active" href="#top">Inicio</a>
+            </li>
+            <li class="nav-item fs-2 fw-semibold">
+              <a class="nav-link active" href="#produtos">Produtos</a>
+            </li>
+            <li class="nav-item fs-2 fw-semibold">
+              <a class="nav-link active" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item fs-2 fw-semibold">
+              <a class="nav-link active" href="#contato">Contato</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+   </header>
+
+<section>
+ <div class="container mt-5 "  >
+        <div id="carouselExampleFade" class="carousel slide position-relative" data-bs-ride="carousel">
+           <div class="carousel-indicators">
+             <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+             <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+             <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+          
+           <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="ratio ratio-16x9 h-100 ">
+                  <img src="./imagens/slid-1.jpg" class="d-flex w-100" >
+                    </div>
+                    <div class="carousel-caption ">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" >
+                  <div class="ratio ratio-16x9 h-100">
+                  <img src="./imagens/slid-6.jpg" class="d-block w-100" >
+                    </div>
+                   <div class="carousel-caption">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="ratio ratio-16x9 h-100">
+                  <img src="./imagens/slid-2.jpg" class="d-block w-100" >
+                  </div>
+                  <div class="carousel-caption">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+           </div>
+           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Previous</span>
+           </button>
+           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+             <span class="visually-hidden">Next</span>
+           </button>
+      </div>
+</div> 
+</section>
+<section>
+     
+    <div class="container" id="sobre">
+        <div class="row">
+          <div class="col-12 col-xl-6 col-md-12 col-sm-12">
+            <div class="title  fw-200 text-center">
+              Feito com Amor <span><i class="bi bi-box2-heart"></i></span>
+            </div>
+            <div class="sub-title fw-lighter">
+              Artes dos Bolos
+            </div>
+           <div class="context">
+            <p>Uma festa sem bolo é apenas um encontro. </p>
+            <p>O motivo do bolo hoje, é a comemoração do aniversário de alguém no mundo! </p>
+            <p>A vida é curta de mais para poupar na cobertura!</p>
+            <p>Preço bom e qualidade é com os nossos bolos. Um diferencial em nossos bolos, temos! </p>
+            <p>Não vale a pena comer apenar um não é mesmo. Faça já seu pedido é ganhe 10% de desconto em outo produto.</p>
+            <p>Final de semana pede um bolo no pote.    </p>
+              <p>Bolo é amor em forma de comida. </p>
+              <p>O bolo favorito de uma pessoa diz muito sobre ela. </p>
+              <p>Para melhorar o dia, comece com uma fatia de bolo. </p>
+           </div>
+           
+          </div>
+          <div  class="col-12 col-xl-6 col-md-12 col-sm-12 text-center">
+            <img src="./imagens/home-page-1.jpg" style=" height: calc(100vh - 300px); margin-top: 50px; ">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center " >
+            <div class="btn btn-lg btn-outline-warning px-4 mt-5 fs-1">Saiba mais</div>
+          </div>
+        </div>
+    </div>
+
+</section>
+
+<section >
+ 
+  <div  class="container text-center mt-4" id="produtos"> 
+    <div class="title container-produtos">
+      Confira nosso produtos
+    </div>
+    <div class="row   justify-content-center">
+            <div class="col-12 col-lg-3 col-md-6 ">
+              <div class="card" >
+                <img src="./imagens/img-2.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fs-2 m-2">Pedaços confeitados</h5>
+                  <p class="card-text fs-3 m-0">Uma variedade saborosa</p>
+                </div>
+                 <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+              </div>
+              
+            </div>
+            
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/img-3.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Bolo de Morango</h5>
+                      <p class="card-text fs-3 m-0">Perfeito para comemoração</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/img-4.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Pão doce</h5>
+                      <p class="card-text fs-3 m-0">sabores leite, coco e chocolate</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/img-5.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Bolo de Chocolate</h5>
+                      <p class="card-text fs-3 m-0">Combinação de sabor e designe</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+    </div>
+    <div class="row   justify-content-center">
+            <div class="col-12 col-lg-3 col-md-6 ">
+              <div class="card" >
+                <img src="./imagens/img-6.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fs-2 m-2">Bolinhos</h5>
+                  <p class="card-text fs-3 m-0">Cobertura + granulados </p>
+                </div>
+                 <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+              </div>
+              
+            </div>
+            
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/img-home.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Chocolate e Morango</h5>
+                      <p class="card-text fs-3 m-0">Prove do melhor</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/slid-5.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Bolo de Pote <span>popular <i class="bi bi-star fs-4"></i></span></h5>
+                      <p class="card-text fs-3 m-0">leite, chocolate ou misto</p>
+                    </div>
+                    
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                   
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/slid-3.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Bolo de Pote <span>medium <i class="bi bi-star fs-4"></i></span></h5>
+                      <p class="card-text fs-3 m-0">baunilha, flocus e oreo</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+    </div>
+    <div class="row   justify-content-center">
+            <div class="col-12 col-lg-3 col-md-6 ">
+              <div class="card" >
+                <img src="./imagens/home-page-2.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fs-2 m-2">Bolo de Pote <span>premium <i class="bi bi-star fs-4"></i></span></h5>
+                  <p class="card-text fs-3 m-0">nutela, açaí e mms </p>
+                </div>
+                 <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+              </div>
+              
+            </div>
+            
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/slid-4.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Biscoitos</h5>
+                      <p class="card-text fs-3 m-0">crocantes, macios e suculentos.</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/home-page-3.jpg" class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Bandeija de Doces</h5>
+                      <p class="card-text fs-3 m-0">presentear alguém querido</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-12 col-lg-3 col-md-6 ">
+                  <div class="card" >
+                    <img src="./imagens/bolo.caindo.jpg " class="card-img-top " alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title fs-2 m-2">Cento de bocinhos</h5>
+                      <p class="card-text fs-3 m-0">festas e sobremesas</p>
+                    </div>
+                     <div class="row my-2">
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-info fs-3">Conferir</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="btn btn-outline-danger fs-3"><i class="bi bi-cart"></i></a>
+                      </div>
+                     </div>
+                  </div>
+            </div>
+    </div>
+  </div>
+  
+  
+</section>    
+    
+
+
+
+
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    const myCarousel = document.querySelector('#carouselExampleFade');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+         interval: 3000,
+         wrap: false
+    });
+
+    // function para diminuir a tamanho da logo ao mover o scroll INICIO
+    const target = document.querySelector('[data-logoA]');
+    const animationClass = 'animet';
+    function animeScroll() {
+      const windowTop = window.pageYOffset;
+     if((windowTop) > 200 ){
+      target.classList.add(animationClass);
+     } else {
+      target.classList.remove(animationClass);
+     }
+    };
+    
+    window.addEventListener('scroll', function() {
+      animeScroll();
+    });
+// function para diminuir a tamanho da logo ao mover o scroll FIM
+  </script>
+</body>
+</html>
