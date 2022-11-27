@@ -5,6 +5,8 @@
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 
 .carousel-item img{
@@ -87,8 +89,8 @@ section{
     letter-spacing: 2px;
 }
 .sub-title  {
-    font-size: 30px;
-    margin: 10px;
+    font-size: 25px;
+    margin: 5px;
 }
 .context{
     margin: 0 10px 20px;
@@ -103,8 +105,21 @@ section{
     margin-bottom: 4rem;
 
 }
-    
-/* tentar utilizar essa referencia abaixo para mudar o icone de list do botao em um icone X  */
+.card .card-text{
+    border-bottom: .2rem solid #f0971c;
+}
+
+/*  CONTATO START */
+input,
+textarea{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+    /* tentar utilizar essa referencia abaixo para mudar o icone de list do botao em um icone X  */
 /* aria-expanded="true" */
 
 
