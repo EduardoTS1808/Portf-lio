@@ -119,6 +119,19 @@ textarea .form-control{
     width: 100% !important;
 }
 
+/* style de atuação das funções de email INICIO */
+.erro{
+    border-color: crimson;
+  }
+#contato .span{
+    position: absolute;
+    color: red;
+    font-size: 1.5em;
+    margin: 0.5em 0 0.5em 70%;
+}
+
+/* style de atuação das funções de email FIM */
+
 
 
 

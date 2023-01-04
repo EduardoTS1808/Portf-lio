@@ -73,11 +73,12 @@
             <div class="row ">
                 <div class="col-12 col-lg-6 col-md-6 ">
                         <label for="nome" class="col-form-label col-form-label-sm ">Nome</label>
-                        <input class="form-control" type="text" name="nome" placeholder="digite seu nome" required>
+                        <input class="form-control" type="text" name="nome" placeholder="Digite seu nome" required>
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="digite seu email">
+                        <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu email"  required> -->
+                        <input type="text" placeholder="  nome@email.com" class=" form-control email" name="email" id="campEmail" required>
                 </div>
             </div>
 
@@ -94,7 +95,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 col-md-6">
                     <label for="complemento" class="col-form-label col-form-label-sm ">Complemento</label>
-                    <input name="complemento" id="comple" class="form-control" cols="15" rows="3"></input>
+                    <input name="complemento" id="comple" class="form-control" cols="15" rows="3" placeholder="Complemento"></input>
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
                     <label for="telefone"> Seu telefone</label>
@@ -105,7 +106,7 @@
             <div class="row">
                 <div class="col">
                     <label for="cidade" class="col-form-label col-form-label-sm ">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="form-control">
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Sua cidade">
                 </div>
                 <div class="col">
                     <label for="estado" class="col-form-label col-form-label-sm ">Estado</label>
@@ -119,7 +120,7 @@
                 </div>
                 <div class="col">
                     <label for="cep" class="col-form-label col-form-label-sm ">CEP</label>
-                    <input type="number" name="cep" id="cep" class="form-control " required>
+                    <input type="number" name="cep" id="cep" class="form-control " placeholder="00000-000" required>
                 </div>
             </div>
 
@@ -128,7 +129,7 @@
                 <div class="col">
                     
                         <label for="info" class="col-form-label col-form-label-sm ">Informações</label>
-                        <textarea class="form-control " name="informacoes" id="info" rows="5"></textarea>
+                        <textarea class="form-control " name="informacoes" id="info" rows="4" placeholder="Digite sua mensagem aqui."></textarea>
                 
                 </div>
             </div>
@@ -137,14 +138,16 @@
                 <div class="col-12">
                     <div class="form-check mb-3">
                         <input type="checkbox" name="promocionais" id="promocionais">
-                        <label for="promocionais" class="form-check-label col-form-label-sm ">Aceito receber
-                            mensagens promocionais</label>
+                        <label for="invalidCheck3" class="form-check-label col-form-label-sm  mt-2">Aceito receber mensagens promocionais</label>
+                       
                     </div>
                 </div>
                 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-sm btn-success fs-4 mb-3 ">Concluir cadastro</button>
-                    <p> <a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber
+                    <!-- <button type="submit" class="btn btn-sm btn-success fs-5 ">Concluir cadastro</button> -->
+                    <input type="submit" class="btn btn-lg btn-success fs-5" value="Concluir Cadrastro">
+
+                    <p class="mt-4" > <a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber
                         novidades.</p>
                  </div>
              </div>
@@ -158,12 +161,20 @@
 
 
 
-<div class="modal fade" id="modal-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Inscrever-me na lista</h5>
-                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Inscrever-me na lista</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h6>Preencha os campos para receber novidades e promoções</h6>
@@ -195,8 +206,38 @@
  
    
 
-    
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+
+
+
+  // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+    // var forms = document.getElementById('#cadastro');
+    let inpu = document.getElementById('');
+    // Faz um loop neles e evita o envio
+    var validation = Array.prototype.filter.call(InputDeviceInfo, function(input) {
+      inpu.addEventListener('submit', function(event) {
+        if (inpu.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        inpu.classList.add('was-validated');
+        console.log("deu certo")
+      }, false);
+    });
+  }, false);
+})();
+
+
+
+
+  </script>
+
      
     
 </body>
