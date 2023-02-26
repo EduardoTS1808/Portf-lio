@@ -10,14 +10,32 @@
     <title>Cadrastro</title>
 
     <style>
-                *{
+           *{
                 box-sizing: border-box;
-                font-family: montserrat;
+                font-family:'montserrat';
 
             }
-            span{
-                font-size: 1rem;
+            html{
+                scroll-behavior: smooth;
+                scroll-padding-top: 50px;
             }
+            #cadastro  .span{
+                position: relative;
+                display:inline; 
+                color: red;
+                margin-left: 50px;
+            } 
+            .span-modal{
+                color: red;
+                margin-left: 10px;
+            }
+           .erro{
+                border-color: crimson;
+            }
+            .navbar-toggler {
+                font-size: 10px !important; 
+            }
+          
 
             @media(max-width:580px){
                 header nav ul li a{
@@ -36,16 +54,16 @@
               </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-1">
-                <li class="nav-item fs-4 fw-semibold">
+                <li class="nav-item fs-5 fw-semibold">
                   <a class="nav-link active" href="./home.html">Inicio</a>
                 </li>
-                <li class="nav-item fs-4 fw-semibold">
+                <li class="nav-item fs-5 fw-semibold">
                   <a class="nav-link active" href="./home.html">Produtos</a>
                 </li>
-                <li class="nav-item fs-4 fw-semibold">
+                <li class="nav-item fs-5 fw-semibold">
                   <a class="nav-link active" href="./home.html">Sobre</a>
                 </li>
-                <li class="nav-item fs-4 fw-semibold">
+                <li class="nav-item fs-5 fw-semibold">
                   <a class="nav-link active" href="./home.html">Contato</a>
                 </li>
     
@@ -73,53 +91,67 @@
             <div class="row ">
                 <div class="col-12 col-lg-6 col-md-6 ">
                         <label for="nome" class="col-form-label col-form-label-sm ">Nome</label>
-                        <input class="form-control" type="text" name="nome" placeholder="digite seu nome" required>
+                        <input class="form-control obrigatorio" type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="digite seu email">
+                        <label for="exampleInputEmail1" class="form-label ">Email</label>
+                         <div class="span"></div>
+                        <input type="text" placeholder="nome@email.com" class=" form-control email"  data-inputEm="input" name="email" required> 
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-6 col-md-6">
                     <label for="endereco" class="col-form-label col-form-label-sm ">Endereço completo</label>
-                    <input type="text" id="endereco" class="form-control" placeholder="Endereço completo">
+                    <input type="text" id="endereco" class="form-control obrigatorio" placeholder="Endereço completo " required > 
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
                     <label for="bairro" class="col-form-label col-form-label-sm "> Bairro</label>
-                    <input type="text" id="bairro" class="form-control" placeholder="Digite seu bairro" required>
+                    <input type="text" id="bairro" class="form-control obrigatorio" placeholder="Digite seu bairro" required >
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-6 col-md-6">
-                    <label for="complemento" class="col-form-label col-form-label-sm ">Complemento</label>
-                    <input name="complemento" id="comple" class="form-control" cols="15" rows="3"></input>
+                    <label for="complemento" class="col-form-label col-form-label-sm">Complemento</label>
+                    <input name="complemento"  class="form-control" cols="15" rows="3" placeholder="Complemento"></input>
                 </div>
                 <div class="col-12 col-lg-6 col-md-6">
                     <label for="telefone"> Seu telefone</label>
-                    <input type="number" class="form-control " placeholder="(00) 00000-0000">
+                    <input type="number" class="form-control numero obrigatorio" placeholder="(00) 00000-0000" >
                 </div>
             </div>
 
             <div class="row">
                 <div class="col">
                     <label for="cidade" class="col-form-label col-form-label-sm ">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="form-control">
+                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Sua cidade" required>
                 </div>
                 <div class="col">
                     <label for="estado" class="col-form-label col-form-label-sm ">Estado</label>
                     <select name="estado" id="estado" class="form-control">
                         <option value="">Selecione um estado</option>
                         <option value="sp">SP</option>
+                        <option value="ce">CE</option>
                         <option value="al">AL</option>
                         <option value="mg">MG</option>
-                        <option value="ce">CE</option>
+                        <option value="ro">RO</option>
+                        <option value="ac">AC</option>
+                        <option value="am">AM</option>
+                        <option value="ma">MA</option>
+                        <option value="to">TO</option>
+                        <option value="df">DF</option>
+                        <option value="sc">SC</option>
+                        <option value="go">GO</option>
+                        <option value="mt">MT</option>
+                        <option value="ms">MS</option>
+                        <option value="rj">RJ</option>
+                        <option value="rn">RN</option>
+                        <option value="pr">PR</option>
                     </select>
                 </div>
                 <div class="col">
                     <label for="cep" class="col-form-label col-form-label-sm ">CEP</label>
-                    <input type="number" name="cep" id="cep" class="form-control " required>
+                    <input type="number" name="cep" id="cep" class="form-control " placeholder="00000-000"  required>
                 </div>
             </div>
 
@@ -128,7 +160,7 @@
                 <div class="col">
                     
                         <label for="info" class="col-form-label col-form-label-sm ">Informações</label>
-                        <textarea class="form-control " name="informacoes" id="info" rows="5"></textarea>
+                        <textarea class="form-control " name="informacoes" id="info" rows="4" placeholder="Digite sua mensagem aqui."></textarea>
                 
                 </div>
             </div>
@@ -137,14 +169,17 @@
                 <div class="col-12">
                     <div class="form-check mb-3">
                         <input type="checkbox" name="promocionais" id="promocionais">
-                        <label for="promocionais" class="form-check-label col-form-label-sm ">Aceito receber
-                            mensagens promocionais</label>
+                        <label for="invalidCheck3" class="form-check-label col-form-label-sm  mt-2">Aceito receber mensagens promocionais</label>
+                       
                     </div>
                 </div>
                 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-sm btn-success fs-4 mb-3 ">Concluir cadastro</button>
-                    <p> <a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber
+                    <!-- <button type="submit" class="btn btn-sm btn-success fs-5 ">Concluir cadastro</button> -->
+                    <input type="submit" class="btn btn-lg btn-success fs-5 p-2" id="concluirC" value="Concluir Cadrastro">
+                    <!-- DIMENCIONAR O TAMANHO DESSE BOTÃO DE ACORDE COM O DA ABA CONTATO -->
+
+                    <p class="mt-4" > <a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-1">Cadastre-se</a> para receber
                         novidades.</p>
                  </div>
              </div>
@@ -158,12 +193,20 @@
 
 
 
-<div class="modal fade" id="modal-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Inscrever-me na lista</h5>
-                <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="modal fade" id="modal-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Receber Novidades da Candy Story</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h6>Preencha os campos para receber novidades e promoções</h6>
@@ -175,11 +218,13 @@
                                 placeholder="nome" required>
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-4 ">
-                            <input type="text" class="form-control form-control-sm mb-2" name="e-mail"
-                                placeholder="e-mail" required>
+                            <input type="text" class="form-control form-control-sm mb-2 email"  name="e-mail"
+                                placeholder="e-mail" id="inputEmail" required>
+                                <div class="span-modal"></div>
                         </div>
                         <div class="form-group col-12 col-lg-4 col-md-4 ">
-                            <button type="submit" class="btn btn-sm btn-success">receber novidades</button>
+                            <!-- <button type="submit" class="btn btn-sm btn-success">receber novidades</button> -->
+                            <input type="submit"   class="btn btn-sm btn-success" id="modalEmail" value="receber novidades">
                         </div>
                     </div>
                 </form>
@@ -195,8 +240,62 @@
  
    
 
+
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
     
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+function validaSubmit (){
+         let nomeUsuario = document.querySelector('.email');
+        if(!nomeUsuario.getAttribute('class').match(/erro/) ) {
+            return false;
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+}
+
+
+function validaEmail (input){ //valida se é um email
+    
+        const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+        if(!this.value.match(emailValido)) {
+            document.querySelector('.span').innerHTML = "E-mail inválido!";
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false;
+        } else {
+            document.querySelector('.span').innerHTML = "";
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+            
+        }
+        
+    }
+    
+const formulario = document.querySelector('#cadastro');
+    
+document.querySelector('.email').addEventListener('focusout', validaEmail);
+formulario.addEventListener('submit', validaSubmit);
+
+document.getElementById('modalEmail').addEventListener('click', function validaEmailModal (){ //valida se é um email
+    const emailModal = document.getElementById('inputEmail');
+    const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i;
+    if(!emailModal.value.match(emailValido)) {
+        document.querySelector('.span-modal').innerHTML = "E-mail inválido!";
+        emailModal.classList.add('erro');
+        event.preventDefault();
+    } else {
+        document.querySelector('.span-modal').innerHTML = "";
+        emailModal.classList.remove('erro');
+        return false;
+    }   
+});
+
+
+
+</script>
+
      
     
 </body>

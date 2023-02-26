@@ -318,7 +318,7 @@
                   <div class="card" >
                     <img src="./imagens/home-page-3.jpg" class="card-img-top " alt="...">
                     <div class="card-body">
-                      <h5 class="card-title fs-2 m-2">Bandeija de Doces</h5>
+                      <h5 class="card-title fs-2 m-2">Bandeja de Doces</h5>
                       <p class="card-text fs-3 m-0">presentear alguém querido</p>
                     </div>
                      <div class="row my-2">
@@ -335,8 +335,8 @@
                   <div class="card" >
                     <img src="./imagens/bolo.caindo.jpg " class="card-img-top " alt="...">
                     <div class="card-body">
-                      <h5 class="card-title fs-2 m-2">Cento de bocinhos</h5>
-                      <p class="card-text fs-3 m-0">festas e sobremesas</p>
+                      <h5 class="card-title fs-2 m-2">Cento de bolinhos</h5>
+                      <p class="card-text fs-3 m-0">festas, sobremesas</p>
                     </div>
                      <div class="row my-2">
                       <div class="col">
@@ -356,6 +356,7 @@
 
 <section>
   <div class="container" id="contato">
+   <form class="form" id="needs-validation">
     <div class="row">
       <div class="col-12 col-lg-6 col-md-6">
         <div class="title"> Contato</div>
@@ -366,15 +367,18 @@
           <div class="input-group">
             <input class="form-control fs-3" type="text" name="nome" placeholder="digite seu nome" required>
           </div>
-          <div class="input-group ">
-            <input  class="form-control fs-3" type="text" name="email" placeholder="digite seu email" required>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control fs-3"  placeholder="digite seu email" id="inputEmail" aria-describedby="inputGroupPrepend"  required> <div class="span"></div>
           </div>
-          <textarea class="form-control" name="" rows="5"></textarea>
-          <bottom type="submit" class="btn btn-lg btn-success fs-2 float-end me-5" > Enviar</bottom>
+          <textarea class="form-control fs-3"  rows="3" placeholder=" digite sua mensagem"></textarea>
+
+          <!-- <input id="btnEnviar" class="btn btn-lg btn-success fs-2 float-end me-5" type="button"   value="Enviar"> -->
+          <input type="submit" class="btn btn-success fs-2 float-end me-5" id="btnEnviar"></input>
         </form>
-        <p>Realizar <a href="./cadrastro.html">Cadrasto</a></p>
       </div>
+      <p class="fs-3">Realizar  <a href="./cadrastro.html">  Cadrasto</a></p>
     </div>
+   </form>
      
    
   </div>
@@ -702,6 +706,7 @@
     const myCarousel = document.querySelector('#carouselExampleFade');
     const carousel = new bootstrap.Carousel(myCarousel, {
          interval: 5500,
+         TransitionEvent: .5,
          wrap: true
     });
 
@@ -721,6 +726,25 @@
       animeScroll();
     });
 // function para diminuir a tamanho da logo ao mover o scroll FIM
+
+// validação de email INICIO
+let enviar = document.querySelector('#btnEnviar');
+let inpEmail = document.querySelector('#inputEmail');
+
+enviar.onclick = () => {
+  const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?/i; 
+  if(inpEmail.value.match(emailValido)){
+    document.querySelector('.span').innerHTML = "";
+    inpEmail.classList.remove('erro');
+    console.log("okkk");
+  } else {
+    document.querySelector('.span').innerHTML = "Email inválido!";
+    inpEmail.classList.add('erro');
+    console.log("errooo");
+    return false;
+  }
+}
+
   </script>
 </body>
 </html>
