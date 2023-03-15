@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/libs.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+   
+    
+    <title>E-commerce com HTML/CSS/JS/BOOTSTRAP/JQUERY</title>
+</head>
+<body>
+    
+  
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-2"  style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <div class="logo-H">
+                <img src="./src/img-jquery/logo_vetorizada.svg">
+                
+            </div> 
+            <button class="navbar-toggler me-3 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon  "> <i class="bi bi-list fs-1"></i></span>
+            </button>
+             
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#top">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Periféricos
+                        </a>
+                        <ul class="dropdown-menu w-100">
+                            <li><a class="dropdown-item" href="#produtos">Mouse <i class="bi bi-mouse"></i></a></li>
+                            <li><a class="dropdown-item" href="#produtos">Fones <i class="bi bi-headset"></i></a></li>
+                            <li><a class="dropdown-item" href="#produtos">Teclados <i class="bi bi-keyboard"></i></a></li>
+                            <li><a class="dropdown-item" href="#produtos">Microfones <i class="bi bi-mic"></i></a></li>
+                            <li><a class="dropdown-item" href="#produtos">Mouse-pad  <i class="bi bi-square"></i></a></li>
+                            <!-- <li><a class="dropdown-item" href="#monitores">monitores  <i class="bi bi-display"></i></a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link nav-modal-open" rel="contato
+                        ">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+    </nav>
+    <div class="banner">
+        
+    </div>
+    
+    
+
+
+    <div id="featured" class=" featured ">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <div class="title-container" >
+                        <h2>Recomendado </h2>
+                    </div>
+                    <div class="owl-carousel  owl-theme owl-loaded loop">
+                        <div class="featured-item"    >
+                            <div class="title fs-4">
+                                Computador completo
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/pc-completo-gamer-2.png" alt="Item 1">
+                            </div> 
+                            <div class="descricao">
+                                <ul class="dropdown">
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-cpu"></i> core i9
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-gpu-card"></i> RTX 3090
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-motherboard"></i> A550g
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-hdd"></i> 2x 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-memory"></i> 2x 16GB
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-device-ssd"></i> 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-fan"></i> 3
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-plugin"></i> 800W
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Computador Full Gamer </div>
+                                <div class="preco">R$ 16.600,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="featured-item"    >
+                            <div class="title fs-4">
+                                Monitor Sansung
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/monitor-4.png " alt="Item 3">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Monitor ultra-wide,taxa de atualização de 244hz, p.... </div>
+                                <div class="preco">R$ 1.400,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="featured-item"    >
+                            <div class="title fs-4">
+                                Teclado Mecanico
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/teclado-1-mecanico.png" alt="Item 4">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Teclado Gtech, size 60%, com RGB, com ... </div>
+                                <div class="preco">R$ 200,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="featured-item"    >
+                            <div class="title fs-4">
+                                FONE
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/fone-1.png" alt="Item 5">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Head-set Gtech,  surround 7.1, + microfone,...</div>
+                                <div class="preco">R$ 250,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="featured-item">
+                            <div class="title fs-4">
+                                Microfone
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/microfone-1.png" alt="Item 6">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Microfone para mesa, gamer, 5 funções... </div>
+                                <div class="preco">R$ 350,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="featured-item">
+                            <div class="title fs-4">
+                                WEB CAM
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/webcam-1.png" alt="Item 7">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">WebCam 1080p, fullHD, + microfone... </div>
+                                <div class="preco">R$ 120,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="featured-item">
+                            <div class="title fs-4">
+                              MOUSE PAD
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/mouse-pad-1.png" alt="Item 8">
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Mouse-pad, RGB, 35cmx50cm </div>
+                                <div class="preco">R$ 40,00 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="featured-item">
+                            <div class="title fs-4">
+                                PC Gamer GIGABYTE
+                            </div>
+                            <div class="img-item">
+                                <img src="src/img-jquery/cpu-gamer-completa.png" alt="Item 9">
+                            </div>
+                            <div class="descricao">
+                                <ul class="dropdown">
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-cpu"></i> Razen7
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-gpu-card"></i> RTX 4090
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-motherboard"></i> B700 ELITE
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-hdd"></i> 4X 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-memory"></i> 2x 32GB
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-device-ssd"></i> 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-fan"></i> 5
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-plugin"></i> 1.200W
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">CPU  para quem curte games e alta performace.  </div>
+                                <div class="preco">R$ 8.926,45 <span>10% OFF </span></div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+     <!-- botao voltar ao top -->
+<button class="btnTop"><i class=" bi bi-arrow-up-circle"></i></button>
+
+    <section class="Produtos " id="produtos">
+        <div class="container text-center">
+            <div class="title-container" >
+                <h2>Produtos </h2>
+            </div>
+            <div class="row ">
+                
+                <div class="col">
+                    <div class="card" >
+                        <img src="src/img-jquery/cpu-gamer-completa.png" class="card-img-top ">
+                        <div class="card-body">
+                           
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">CPU completa, para quem curte games e alta performace. </div>
+                                <div class="preco">R$ 8.926,45 </div>
+                                <button class="btn btn-success   fs-2">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                  
+
+                  
+                    <div class="card" >
+                        <div class="btns-mouse ">
+                          
+                            
+                            <div class="descricao-produtos ">
+                                <ul class="dropdown">
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-cpu"></i> core i9
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-gpu-card"></i> RTX 3090
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-motherboard"></i> A550g
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-hdd"></i> 2x 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-memory"></i> 2x 16GB
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-device-ssd"></i> 1T
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-fan"></i> 3
+                                    </li>
+                                    <li class="dropdown-item"> 
+                                        <i class="bi bi-plugin"></i> 800W
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                                                        
+                        </div>
+                      
+                        <img src="src/img-jquery/gabneete-gamer.png" class="card-img-top">
+                        <!-- <div class="botao-info" id="info-produto">
+                            <i class="bi bi-info-circle "></i>
+                        </div> -->
+                       
+                        <div class="card-body ">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Gabnete Gamer RGB azul</div>
+                                <div class="preco">R$ 200,00 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+
+            
+
+                 
+
+                    <div class="card" >
+                        <img src="src/img-jquery/mouse-pad-3.png" class="card-img-top">
+                        <div class="btns-mouse d-none justify-content-between m-2">
+                            
+                                <i class="bi bi-x-lg fs-1 " id="btnFechar" ></i>
+
+                                <i class="bi bi-cart-plus fs-1" ></i>
+
+                                <div class="descricao-produtos">
+                                    <ul class="dropdown">
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-cpu"></i> core i9
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-gpu-card"></i> RTX 3090
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-motherboard"></i> A550g
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-hdd"></i> 2x 1T
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-memory"></i> 2x 16GB
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-device-ssd"></i> 1T
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-fan"></i> 3
+                                        </li>
+                                        <li class="dropdown-item"> 
+                                            <i class="bi bi-plugin"></i> 800W
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">HeadSet Gamer sem fio + microfone</div>
+                                <div class="preco">R$ 329,00 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/mouse-4.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Mouse Gamer com RGB</div>
+                                <div class="preco">R$ 159,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/monitor-4.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Monitor 28" full HD, 144hz... </div>
+                                <div class="preco">R$ 1.250,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/mouse-pad-4.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Mouse-Pad Gamer com RGB 35cmx20cm</div>
+                                <div class="preco">R$ 62,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/teclado-4-mouse.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Kit Teclado + mouse simples</div>
+                                <div class="preco">R$ 106,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/teclado-1-mecanico.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Teclado mecânico Gtech RGB 80%</div>
+                                <div class="preco">R$ 354,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/webcam-3.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">WebCam 1080px, Full HD com Microfone</div>
+                                <div class="preco">R$ 122,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card" >
+                        <img src="src/img-jquery/monitor-2.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Monitor 40" 4k, 0,5ms de resposta...</div>
+                                <div class="preco">R$ 2.780,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card">
+                        <img src="src/img-jquery/cpu-completa-escritorio.png" class="card-img-top">
+                        <div class="card-body">
+                           
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">CPU Completa comum...</div>
+                                <div class="preco">R$ 2.100,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card">
+                        <img src="src/img-jquery/monitor-1.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Monitor 26" 1ms de resposta, 2k</div>
+                                <div class="preco">R$ 1.209,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card">
+                        <img src="src/img-jquery/mouse-pad-2.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Mouse-Pad 60cmx30cm Simples.</div>
+                                <div class="preco">R$ 34,90 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card">
+                        <img src="src/img-jquery/microfone-4.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Microfone HyperX M3000H para PC</div>
+                                <div class="preco">R$ 323,70 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="card">
+                        <img src="src/img-jquery/mouse-pad-1.png" class="card-img-top">
+                        <div class="card-body">
+                            <div class="container-descricoes">
+                                <div class="nome-produto fs-4">Mouse-Pad Gamer com RGB 40cm</div>
+                                <div class="preco">R$ 116,00 </div>
+                                <button class="btn btn-success fs-2 ">
+                                    Comprar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+    </section>
+    
+ 
+  
+
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title fs-2"   id="modalTitleId">Modal title</h5>
+                            <button type="button" class="btn-close fs-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+            <div class="modal-body">
+              
+            </div>
+          
+        </div>
+    </div>
+  </div>
+  <!-- sobre nós        inicio -->
+  <div class="visually-hidden" id="sobre">
+
+ <p>Fundado em 2003, a EDUTECH foi um dos pioneiros no comércio eletrônico brasileiro e hoje é o maior e-commerce de Tecnologia e Games na América Latina. Desde sua criação, a empresa é formada por histórias e conquistas de um time obcecado por agilidade, qualidade de atendimento, velocidade de entrega e respeito pelo consumidor.</p>
+<p> Com preços imbatíveis e mais de 20 mil produtos em seu catálogo, a EDUTECH está sempre à frente e traz em primeira mão os melhores lançamentos do mercado mundial. São mais de 8 milhões de pessoas atendidas e entregas realizadas em todas as regiões do país, totalizando mais de 5.000 cidades.</p>
+
+<p>    O e-commerce é um dos sites mais acessados do país e lidera o ranking das lojas virtuais mais recomendadas pelos consumidores brasileiros, no segmento de tecnologia e games*, com os principais índices de avaliação e selos de qualidade da internet.</p>
+
+    
+<p> Além do e-commerce, a EDUTECH é um grande incentivador dos esportes eletrônicos, sendo responsável pela criação de uma das maiores equipes de League of Legends do Brasil, a EDUTECH! Esports, tetracampeã nacional e a primeira representante brasileira no Campeonato Mundial.</p>
+    </div>
+    
+    <!-- CONTATO            INICIO -->
+
+<div class="content-form visually-hidden"id="contato"  >
+        
+    <form class="form col-12" id="formContato"  >
+      <div class="mb-3">
+          <label  class="form-label">Nome</label>
+          <input type="nome" id="usuarioNome" class="form-control "  placeholder="Digite seu nome" required>
+          <div class="help">Inválido</div>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="usuarioEmail" placeholder="nome@example.com" required>
+          <div class="help ">Inválido</div>
+      </div>
+      <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Deixe sua mensagem para nós.</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary me-5 fs-2 px-3" id="btnSubform">Enviar</button>
+      
+    </form>
+ 
+</div>
+
+<!-- //////////////////////// -->
+<div class="content-formAg visually-hidden"  id="agenda" >
+        
+    <form class="form-agenda col-12" id="formAgenda" >
+      <div class="mb-3">
+          <label for="name"  class="form-label">Nome</label>
+          <input type="text"  class="form-control " id="nome"  placeholder="Digite seu nome" > 
+          <div class="help">Inválido</div>
+      </div>
+      <div class="mb-3">
+          <label  class="form-label">Endereço Completo</label>
+          <input type="text" class="form-control " id="endereco"  placeholder="Digite seu endereço completo" > 
+          <div class="help">Inválido</div>
+      </div>
+      <div class="mb-3">
+          <label for="number" class="form-label">Número</label>
+          <input type="text"  class="form-control" id="numeroR"  placeholder="Digite o Número da sua residência" > 
+          <div class="help">Inválido</div>
+      </div>
+      <div class="mb-3">
+          <label for="bairro" class="form-label">Bairro</label>
+          <input type="text"  class="form-control " id="bairro" placeholder="Digite seu Bairro" > 
+          <div class="help">Inválido</div>
+      </div>
+      <div class="mb-3">
+        <label for="cep" class="form-label">CEP</label>
+        <input type="text" class="form-control" id="cep" placeholder="Digite seu CEP"  >
+        <div class="help ">Inválido</div>
+    </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Data para a visita</label>
+        <input type="text" class="form-control" id="date"  placeholder="Digite a Data">
+        <div class="help ">Inválido</div>
+    </div>
+     
+      <div class="mb-3">
+        <label for="hora" class="form-label">Horário Ideal</label>
+        <input type="text" class="form-control" id="hora"  placeholder="Digite a hora desejada">
+        <div class="help ">Inválido</div>
+    </div>
+     
+    <div class="mb-3">
+        <label for="tel" class="form-label">Telefone para Contato</label>
+        <input type="text" class="form-control" id="tel"  placeholder="Número de Telefone">
+        <div class="help ">Inválido</div>
+    </div>
+   
+      <button type="submit" id="btnAgendar" class="btn btn-primary me-5 fs-2 px-3">Agendar</button>
+    </form>
+ 
+</div>
+
+ 
+
+    <!-- modal fim -->
+
+ 
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo-F">
+                        
+                        <img src="./src/img-jquery/logo_vetorizada.svg" alt="">
+                        
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#top">Home</a></li>
+                            <li><a href="#" class="nav-link nav-modal-open" rel="sobre">Sobre Nós</a></li>
+
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li>  <a href="#" class="nav-link nav-modal-open" rel="contato
+                                ">Contato</a></li>
+                                <li><a href="#" class="nav-link nav-modal-open" rel="agenda">Agendar visita de um Técnico</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100025897128186"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/eduardo20_ts/"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://github.com/EduardoTS1808/Portf-lio"><i class="fa fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text">
+                        <p>EDUTECH &copy; Todos os direitos reservados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+        <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./vendor/owl/js/owl.js"></script>
+        <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
+        <script src="./js/custom.js"></script>
+    </body>
+    </html>
