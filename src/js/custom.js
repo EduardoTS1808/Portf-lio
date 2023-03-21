@@ -25,7 +25,7 @@ owl.owlCarousel({
     loop:true,
     margin:10,
     autoplay:true,
-    autoplayTimeout:3000,
+    autoplayTimeout:4000,
     autoplayHoverPause:true,
     responsive:{
         0:{
@@ -56,37 +56,6 @@ $('.play').on('click',function(){
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
 })
-
-
-
-
-
-///!!!!!!!!!!!!!!!!! AINDA EM ANÁLISE !!!!!!!!!!!!!!!!
-
-
-const descricaoProdutos = $('.descricao-produtos')
-const btnClose = $('#btnFechar')
-const infoProduto = $('#info-produto')
-
-infoProduto.on('click',  function(elem){
-    descricaoProdutos.toggleClass('active')
-    btnClose.addClass('active')  
-})
-// btnClose.click( function()
-//     $(this).toggleClass('active')
-// )
-
-
-
-
-//callbaks
-
-
-// $('.Produtos:nth(2)').hide(2000, function() {
-//     console.log( $(this).find('.nome-produto').text() + 'esgotado' )
-// })
-
-
 
 
 // 100% FUNCIONAL
@@ -120,11 +89,22 @@ $('.nav-modal-open').on('click', function(e){
      animeScroll();
    });
 
+//////////////////
+const myCarousel = $('#carouselExampleFade');
+const carousel = new bootstrap.Carousel(myCarousel, {
+     interval: 5000,
+     TransitionEvent: .7,
+     wrap: true,
+     touch: true
+});
+
 /////   VALIDAÇÃO DE FORMULÁRIO INICIO    ////////////
 function validate(elem){
     if(elem.val() == ''){
+        let divHelp = $('div .help')
         console.log('o campo '+ elem.attr('type') +' é obrigatório')
-        elem.addClass('invalid')
+        elem.addClass('invalid') 
+
         return false
     } else{
         elem.removeClass('invalid')
@@ -139,82 +119,60 @@ $('body').on('focusout', '#usuarioNome', function(){
     validate($(this))
 } )
 
-    $('body').on('submit', '.modal .form ', function(e){
+$('body').on('submit', '.modal .form ', function(e){
         e.preventDefault();
         const nome = $('#usuarioNome')
         const email = $('#usuarioEmail')
+        const allInputs = $(":input") 
         validate(nome)
         validate(email)
     
-        if(nome.hasClass('invalid') || email.hasClass('invalid') ){
+        if(nome.hasClass('invalid') || email.hasClass('invalid') || allInputs.hasClass('invalid')){
             console.log('erro')
             return false
         } else{
             $('.content-form #formContato').submit()
         
         }
-     } )
+ } )
 
 
 
 ///////////////////////////////////////////////////////
    
-const allInputs = $(":input")  
-function percorrerCadaInput (){
-       allInputs.each(function( i ) {
-           if($('input').val() == ''){
-                $('input').addClass('invalid')
-                console.log('item '+ $('input').attr('id') +' vazio ')
-                return false
-        } else{
-                $('input').removeClass('invalid')
-                console.log('item '+ $('input').attr('id') +' okkk   ')
-                $('.content-form #formContato').submit()
+
+
+
+    
        
-       }
-     } )   
-   }
-   
-
-$('body').on('submit', '.modal .form-agenda ', function(e){
-    e.preventDefault();
-
-    percorrerCadaInput()
- } )
-
-
-
- 
-//  $('body').on('focus', '#nome', function(){
-//     validate($(this))
-// })
-// $('body').on('focus', '#date', function(){
-//      validate($(this))
-//     $('#date').mask('00/00/0000');
-// })
-// $('body').on('focus', '#hora', function(){
-//      validate($(this))
-//     $('#hora').mask('00:00h');
-// })
-// $('body').on('focus', '#cpf', function(){
-//      validate($(this))
-//     $('#cpf').mask('000.000.000-00');
-// })
-// $('body').on('focus', '#tel', function(){
-//      validate($(this))
-//     $('#tel').mask('(00) 0 0000-0000');
-// })
-// $('body').on('focus', '#cep', function(){
-//      validate($(this))
-//     $('#cep').mask('00000-000');
-// })
-// $('body').on('focus', '#endereco', function(){
-//      validate($(this))
-// })
-// $('body').on('focus', '#bairro', function(){
-//      validate($(this))
-// })
-// $('body').on('focus', '#numeroR', function(){
-//      validate($(this))
-// })
+      
+        $('body').on('focus', '#date', function(){
+            validate($(this))
+            $('#date').mask('00/00/0000');
+        })
+        $('body').on('focus', '#hora', function(){
+            validate($(this))
+            $('#hora').mask('00:00h');
+        })
+        $('body').on('focus', '#cpf', function(){
+            validate($(this))
+            $('#cpf').mask('000.000.000-00');
+        })
+        $('body').on('focus', '#tel', function(){
+            validate($(this))
+            $('#tel').mask('(00) 0 0000-0000');
+        })
+        $('body').on('focus', '#cep', function(){
+            $('#cep').mask('00000-000');
+            validate($(this))
+        })
+        $('body').on('focus', '#endereco', function(){
+            validate($(this))
+        })
+        $('body').on('focus', '#bairro', function(){
+            validate($(this))
+        })
+        $('body').on('focus', '#numeroR', function(){
+            validate($(this))
+        })
 
