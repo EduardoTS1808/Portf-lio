@@ -8,8 +8,8 @@ const imagemin = require('gulp-imagemin')
 
 function tarefasCSS() {  
    return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css',
+                    './node_modules/bootstrap-icons/font/bootstrap-icons.css',
                     './vendor/owl/css/owl.css',
-                    './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
                     './src/css/style.css'])                      // vai pegar qualquer arquivo .css dentro so vendor
     //pipe  são os tratamentos dos arquivos
         .pipe(concat('styles.css'))
@@ -24,13 +24,14 @@ function tarefasJS(){
     return gulp.src(['./node_modules/jquery/dist/jquery.js',
                     './node_modules/bootstrap/dist/js/bootstrap.js',
                     './vendor/owl/js/owl.js',
-                     './vendor/jquery-mask/jquery.mask.js',
+                    './vendor/jquery-mask/jquery.mask.js',
                     './src/js/custom.js'])
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/myJS'))
 }
+
 function tarefasImages() {
 return   gulp.src('./src/img-jquery/*')
          .pipe(imagemin( {
@@ -50,4 +51,3 @@ return   gulp.src('./src/img-jquery/*')
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
 exports.images = tarefasImages
-// exports.default = parallel( tarefasCSS, tarefasJS, tarefasImages)
