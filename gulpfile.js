@@ -6,6 +6,7 @@ const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
 const htmlmin = require('gulp-htmlmin')
+const babel = require('gulp-babel')
 const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
 
@@ -30,7 +31,10 @@ function tarefasJS(callback){
                     './vendor/owl/js/owl.js',
                     './vendor/jquery-mask/jquery.mask.js',
                     './src/js/custom.js'])
-       
+        .pipe(babel({
+          comments: true,
+          presets: ['@babel/env']
+        }))
         .pipe(concat('scripts.js'))
         .pipe(uglify())         
         .pipe(rename({suffix: '.min'}))
