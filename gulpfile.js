@@ -1,16 +1,20 @@
+const {series} = require('gulp')
 const gulp = require('gulp')
 const concat = require('gulp-concat')
 const cssmin = require('gulp-cssmin')      //mimifica o arquivo CS)
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
+const htmlmin = require('gulp-htmlmin')
+const browserSync = require('browser-sync').create()
+const reload = browserSync.reload
 
 
-function tarefasCSS() {  
-   return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css',
+function tarefasCSS(callback) {  
+      gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css',
                     './node_modules/bootstrap-icons/font/bootstrap-icons.css',
                     './vendor/owl/css/owl.css',
-                    './src/css/style.css'])                      // vai pegar qualquer arquivo .css dentro so vendor
+                    './src/css/style.css'])                      
     //pipe  são os tratamentos dos arquivos
         .pipe(concat('styles.css'))
         .pipe(cssmin())         // não precisa de parâmetro, a propria função faz a mimificação de todos os arquivos
@@ -18,36 +22,67 @@ function tarefasCSS() {
         .pipe(gulp.dest('./dist/myCSS'))  
     //  vai pegas os arquivos 'aqui' e vou direcionar para um nome destinho 'mesmo que não existe, ele cria' 
     //dist é o meu diretório de produção, ou seja, o que será publicado quando meu projeto estiver pronto para subir para o servidor
-      
+   return callback()
 }
-function tarefasJS(){
-    return gulp.src(['./node_modules/jquery/dist/jquery.js',
+function tarefasJS(callback){
+     gulp.src(['./node_modules/jquery/dist/jquery.js',
                     './node_modules/bootstrap/dist/js/bootstrap.js',
                     './vendor/owl/js/owl.js',
                     './vendor/jquery-mask/jquery.mask.js',
                     './src/js/custom.js'])
+       
         .pipe(concat('scripts.js'))
-        .pipe(uglify())
+        .pipe(uglify())         
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./dist/myJS'))
+     return  callback()
 }
 
-function tarefasImages() {
-return   gulp.src('./src/img-jquery/*')
-         .pipe(imagemin( {
-            pngquant: true,
-            optipng: false,
-            zopflipng: true,
-            jpegRecompress: false,
-            mozjpeg: true,
-            gifsicle: true,
-            svgo: true,
-            concurrent: 10,
-            quiet: true
-         }))
-        .pipe(gulp.dest('./dist/myImganes'));
+function tarefasImages(callback) {
+  gulp.src('./src/img-jquery/**/*')
+         .pipe(imagemin([
+          imagemin.gifsicle({interlaced: true}),
+          imagemin.mozjpeg({quality: 75, progressive: true}),
+          imagemin.optipng({optimizationLevel: 5}),
+          imagemin.svgo({
+            plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+            ]
+          })
+        ]))
+        .pipe(gulp.dest('dist/images'))
+    return   callback()
    }
+function tarefasHTML(callback){
+    gulp.src('./src/**/*.html')
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest('./dist'))
+
+  return  callback()
+}
+gulp.task('serve', function(){
+
+  browserSync.init({
+      server: {
+          baseDir: "./dist"
+      }
+  })
+  // gulp.watch('./dist/**/*').on('change', reload)
+  gulp.watch('./src/**/*').on('change', process) // repete o processo quando alterar algo em src
+  gulp.watch('./src/**/*').on('change', reload)
+
+})
+function end(callback){
+  console.log('tarefas concluidas com sucesso!!!')
+  return callback()
+}
+const process = series(tarefasCSS, tarefasJS, tarefasHTML, end)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
 exports.images = tarefasImages
+exports.htmls = tarefasHTML
+
+
+exports.default = process

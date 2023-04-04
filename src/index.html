@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./dist/myCSS/styles.min.css">
-    <title>E-commerce com HTML/CSS/JS/BOOTSTRAP/JQUERY</title>
+
+    <link rel="stylesheet" href="./myCSS/styles.min.css">
+    <title>E-commerce com HTML/CSS/JS/BOOTSTRAP/JQUERY/GULP/BABEL/NODE</title>
 </head>
 <body>
     
@@ -16,17 +16,17 @@
         <div class="container-fluid">
             <div class="logo-H">
               
-                <img src="./src/img-jquery/logo_vetorizada.svg">
+                <img src="./images/logo_vetorizada.svg">
                 
             </div> 
             <button class="navbar-toggler me-3 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon  "> <i class="bi bi-list fs-1"></i></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
              
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#top">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#top">inicio</a>
                     </li>
                     
                     <li class="nav-item">
@@ -58,13 +58,13 @@
               </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./src/img-jquery/banner.png" class="d-block w-100 h-100" alt="...">
+                <img src="./images/banner.png" class="d-block w-100 h-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./src/img-jquery/banner01.png" class="d-block w-100" alt="...">
+                <img src="./images/banner01.png" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./src/img-jquery/banner03.png" class="d-block w-100" alt="...">
+                <img src="./images/banner03.png" class="d-block w-100" alt="...">
               </div>
             </div>
             
@@ -82,12 +82,13 @@
                         <h2>Recomendado </h2>
                     </div>
                     <div class="owl-carousel  owl-theme owl-loaded loop">
+                       
                         <div class="featured-item"    >
                             <div class="title fs-4">
                                 Computador completo
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/pc-completo-gamer-2.png" alt="Item 1">
+                                <img src="./images/pc-completo-gamer-2.png" alt="Item 1">
                             </div> 
                             <div class="descricao">
                                 <ul class="dropdown">
@@ -131,7 +132,7 @@
                                 Monitor Sansung
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/monitor-4.png " alt="Item 3">
+                                <img src="./images/monitor-4.png " alt="Item 3">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Monitor ultra-wide,taxa de atualização de 244hz, p.... </div>
@@ -147,7 +148,7 @@
                                 Teclado Mecanico
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/teclado-1-mecanico.png" alt="Item 4">
+                                <img src="./images/teclado-1-mecanico.png" alt="Item 4">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Teclado Gtech, size 60%, com RGB, com ... </div>
@@ -163,7 +164,7 @@
                                 FONE
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/fone-1.png" alt="Item 5">
+                                <img src="./images/fone-1.png" alt="Item 5">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Head-set Gtech,  surround 7.1, + microfone,...</div>
@@ -180,7 +181,7 @@
                                 Microfone
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/microfone-1.png" alt="Item 6">
+                                <img src="./images/microfone-1.png" alt="Item 6">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Microfone para mesa, gamer, 5 funções... </div>
@@ -195,7 +196,7 @@
                                 WEB CAM
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/webcam-1.png" alt="Item 7">
+                                <img src="./images/webcam-1.png" alt="Item 7">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">WebCam 1080p, fullHD, + microfone... </div>
@@ -210,7 +211,7 @@
                               MOUSE PAD
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/mouse-pad-1.png" alt="Item 8">
+                                <img src="./images/mouse-pad-1.png" alt="Item 8">
                             </div>
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Mouse-pad, RGB, 35cmx50cm </div>
@@ -225,7 +226,7 @@
                                 PC Gamer GIGABYTE
                             </div>
                             <div class="img-item">
-                                <img src="src/img-jquery/cpu-gamer-completa.png" alt="Item 9">
+                                <img src="./images/cpu-gamer-completa.png" alt="Item 9">
                             </div>
                             <div class="descricao">
                                 <ul class="dropdown">
@@ -272,7 +273,11 @@
         </div>
     </div>
      <!-- botao voltar ao top -->
-<button class="btnTop"><i class=" bi bi-arrow-up-circle"></i></button>
+<button class="btnTop">
+    <i class=" bi bi-arrow-up-circle"></i>
+    <!-- <i class="fa-solid fa-circle-arrow-up"></i> -->
+   
+</button>
 
     <section class="Produtos " id="produtos">
         <div class="container text-center">
@@ -283,7 +288,7 @@
                 
                 <div class="col">
                     <div class="card" >
-                        <img src="src/img-jquery/cpu-gamer-completa.png" class="card-img-top ">
+                        <img src="./images/cpu-gamer-completa.png" class="card-img-top ">
                         <div class="card-body">
                            
                             <div class="container-descricoes">
@@ -336,7 +341,7 @@
                                                         
                         </div>
                       
-                        <img src="src/img-jquery/gabneete-gamer.png" class="card-img-top">
+                        <img src="./images/gabneete-gamer.png" class="card-img-top">
                         <!-- <div class="botao-info" id="info-produto">
                             <i class="bi bi-info-circle "></i>
                         </div> -->
@@ -359,7 +364,7 @@
                  
 
                     <div class="card" >
-                        <img src="src/img-jquery/mouse-pad-3.png" class="card-img-top">
+                        <img src="./images/mouse-pad-3.png" class="card-img-top">
                         <div class="btns-mouse d-none justify-content-between m-2">
                             
                                 <i class="bi bi-x-lg fs-1 " id="btnFechar" ></i>
@@ -408,7 +413,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/mouse-4.png" class="card-img-top">
+                        <img src="./images/mouse-4.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Mouse Gamer com RGB</div>
@@ -422,7 +427,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/monitor-4.png" class="card-img-top">
+                        <img src="./images/monitor-4.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Monitor 28" full HD, 144hz... </div>
@@ -436,7 +441,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/mouse-pad-4.png" class="card-img-top">
+                        <img src="./images/mouse-pad-4.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Mouse-Pad Gamer com RGB 35cmx20cm</div>
@@ -450,7 +455,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/teclado-4-mouse.png" class="card-img-top">
+                        <img src="./images/teclado-4-mouse.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Kit Teclado + mouse simples</div>
@@ -464,7 +469,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/teclado-1-mecanico.png" class="card-img-top">
+                        <img src="./images/teclado-1-mecanico.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Teclado mecânico Gtech RGB 80%</div>
@@ -478,7 +483,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/webcam-3.png" class="card-img-top">
+                        <img src="./images/webcam-3.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">WebCam 1080px, Full HD com Microfone</div>
@@ -492,7 +497,7 @@
                 </div>
                 <div class="col ">
                     <div class="card" >
-                        <img src="src/img-jquery/monitor-2.png" class="card-img-top">
+                        <img src="./images/monitor-2.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Monitor 40" 4k, 0,5ms de resposta...</div>
@@ -506,7 +511,7 @@
                 </div>
                 <div class="col ">
                     <div class="card">
-                        <img src="src/img-jquery/cpu-completa-escritorio.png" class="card-img-top">
+                        <img src="./images/cpu-completa-escritorio.png" class="card-img-top">
                         <div class="card-body">
                            
                             <div class="container-descricoes">
@@ -521,7 +526,7 @@
                 </div>
                 <div class="col ">
                     <div class="card">
-                        <img src="src/img-jquery/monitor-1.png" class="card-img-top">
+                        <img src="./images/monitor-1.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Monitor 26" 1ms de resposta, 2k</div>
@@ -535,7 +540,7 @@
                 </div>
                 <div class="col ">
                     <div class="card">
-                        <img src="src/img-jquery/mouse-pad-2.png" class="card-img-top">
+                        <img src="./images/mouse-pad-2.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Mouse-Pad 60cmx30cm Simples.</div>
@@ -549,7 +554,7 @@
                 </div>
                 <div class="col ">
                     <div class="card">
-                        <img src="src/img-jquery/microfone-4.png" class="card-img-top">
+                        <img src="./images/microfone-4.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Microfone HyperX M3000H para PC</div>
@@ -563,7 +568,7 @@
                 </div>
                 <div class="col ">
                     <div class="card">
-                        <img src="src/img-jquery/mouse-pad-1.png" class="card-img-top">
+                        <img src="./images/mouse-pad-1.png" class="card-img-top">
                         <div class="card-body">
                             <div class="container-descricoes">
                                 <div class="nome-produto fs-4">Mouse-Pad Gamer com RGB 40cm</div>
@@ -714,7 +719,7 @@
                 <div class="col-md-12">
                     <div class="logo-F">
                         
-                        <img src="./src/img-jquery/logo_vetorizada.svg" alt="">
+                        <img src="./images/logo_vetorizada.svg" alt="">
                         
                     </div>
                 </div>
@@ -754,6 +759,7 @@
                 </div>
             </div>
         </div>
-        <script src="./dist/myJS/scripts.min.js"></script>
+        <!-- <script src="../node_modules/bootstrap-icons/font/bootstrap-icons.json"></script> -->
+        <script src="./myJS/scripts.min.js"></script>
     </body>
     </html>
