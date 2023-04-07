@@ -1,0 +1,17 @@
+.navegation{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    .logo{
+        font-size: 3em;
+    }
+}
+nav{
+    .nav-link{
+        color: $fontColor01;
+        padding: 20px 10px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}

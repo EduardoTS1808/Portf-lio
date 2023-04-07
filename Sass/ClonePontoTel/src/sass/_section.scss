@@ -1,0 +1,38 @@
+section{
+    padding: 10px 20px;
+     .home{
+         display: flex;
+         width: 100%;
+         margin: 2em 0;
+                 .container-block{
+                     width: 55em;
+                     height: fit-content;
+                     h1{
+                     color: $fontColor02;
+                     font-size: 4em; 
+                     margin: 2em 0 1em;
+                     font-family: 'Rubik', sans-serif;
+                     }
+                     .paragrafo-1{
+                         font-size: 1.8em; 
+                     }
+                     .btnDemo{
+                     background-color: #ff6854;
+                     padding: 1em;
+                     width: 100%;
+                     border-radius: .5em;
+                     }
+                     .paragrafo-2{
+                         color: #fff;
+                         font-size: 2em;
+                         align-items:center ;
+                     }
+                 }
+                 .container-image{
+                     width: 55em;
+                     height: fit-content;
+                 }
+ 
+ 
+    }
+ }

@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,400&family=Rubik:wght@300;400;500;600;800&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: #f7f7f7;
+  font-size: 62.5%;
+}
+
+section {
+  padding: 10px 20px;
+}
+section .home {
+  display: flex;
+  width: 100%;
+  margin: 2em 0;
+}
+section .home .container-block {
+  width: 55em;
+  height: fit-content;
+}
+section .home .container-block h1 {
+  color: #2C3E50;
+  font-size: 4em;
+  margin: 2em 0 1em;
+  font-family: "Rubik", sans-serif;
+}
+section .home .container-block .paragrafo-1 {
+  font-size: 1.8em;
+}
+section .home .container-block .btnDemo {
+  background-color: #ff6854;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.5em;
+}
+section .home .container-block .paragrafo-2 {
+  color: #fff;
+  font-size: 2em;
+  align-items: center;
+}
+section .home .container-image {
+  width: 55em;
+  height: fit-content;
+}
+
+.usuarios .title-container {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #2C3E50;
+  display: flex;
+  justify-content: center;
+}
+.usuarios .logos-empresas {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 0;
+  margin-left: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.usuarios img {
+  width: 80px;
+  max-width: 100%;
+  margin-right: 18px;
+  margin-left: 18px;
+  padding-right: 0;
+}
+.usuarios .comentarios img {
+  width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.navegation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  align-items: center;
+}
+.navegation .logo {
+  font-size: 3em;
+}
+
+nav .nav-link {
+  color: #2D3F51;
+  padding: 20px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
