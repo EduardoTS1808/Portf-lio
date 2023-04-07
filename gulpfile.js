@@ -81,7 +81,7 @@ function end(callback){
   console.log('tarefas concluidas com sucesso!!!')
   return callback()
 }
-const process = series(tarefasCSS, tarefasJS, tarefasHTML, end)
+const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImages, end)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
