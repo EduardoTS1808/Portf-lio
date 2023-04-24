@@ -12,16 +12,14 @@
 
 $black: #000;
 $bg-page:  linear-gradient(120deg, #f9ffff 0, #c1dcff 50%, #89b0e0 100%);
-
+$nav-font-size: 1rem;
 html{
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 	scroll-padding-top: 10px;
 }
 body {
-	// background-image: linear-gradient(120deg, #f9ffff 0, #c1dcff 50%, #89b0e0 100%);
 	background: $bg-page;
-	/* background-color: #011E41; */
 }
 p {
 	margin-bottom: 0px;
