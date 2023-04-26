@@ -1,0 +1,89 @@
+/* Responsive Style */
+
+@media (max-width: 991px) {
+	
+	.banner {
+		height: 27rem;
+		padding: 100px 100px;
+	}
+	.navbar .navbar-brand {
+		width: auto;
+	}
+	.navbar:after {
+		display: none;
+	}
+	#navbarResponsive {
+		z-index: 99999;
+		position: absolute;
+		top: 96px;
+		width: 100%;
+		text-align: center;
+		background-color: rgba(250,250,250,0.95);
+		box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+	}
+	.navbar-dark .navbar-nav .nav-item {
+		border-bottom: 1px solid #eee;
+	}
+	.navbar-dark .navbar-nav .nav-item:last-child {
+		border-bottom: none;
+	}
+	.navbar-dark .navbar-nav .nav-link {
+		padding: 15px 0px;
+	}
+	.btnTop.animet{
+		
+		margin-left: 90%;
+	}
+	
+	
+}
+
+@media (max-width: 767px) {
+	html{
+		font-size: 55%;
+	}
+	.banner {
+		height: 19rem;
+		padding: 80px 80px;
+	}
+	.modal .main-content form input.button {
+		margin-top: 20px;
+	}
+	
+	.logo-F  img{
+		height: 88px;
+		
+	}
+	.btnTop.animet{
+		font-size: 4rem;
+		margin-left: 88%;
+	}
+	
+}
+@media (max-width: 480px) {
+	html{
+		font-size: 50%
+	}
+	.banner {
+		height: 16rem;
+		padding: 70px 70px;
+	}
+	.featured-item {
+		height:400px;
+	}
+	.featured-item .img-item {
+		// height: 22rem;
+	}
+	.featured-item .img-item img{
+		height: auto;
+	}
+	.card{
+		width: 270px;
+	}
+	.card img{
+		height: 180px;
+	}
+	.btnTop.animet{
+		margin-left: 80%;
+	}
+}

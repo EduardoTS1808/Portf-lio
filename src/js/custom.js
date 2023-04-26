@@ -111,6 +111,9 @@ function validate(elem){
     }
   
 }
+$('#bont-info').on('click', function(){
+    // $('.card .descricao-produtos').toggleClass('after')
+})
 
 $('body').on('focusout', '#usuarioEmail', function(){
     validate($(this))

@@ -7,6 +7,7 @@ const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
 const htmlmin = require('gulp-htmlmin')
 const babel = require('gulp-babel')
+const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create()
 const reload = browserSync.reload
 
@@ -14,17 +15,25 @@ const reload = browserSync.reload
 function tarefasCSS(callback) {  
       gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css',
                     './node_modules/bootstrap-icons/font/bootstrap-icons.css',
-                    './vendor/owl/css/owl.css',
-                    './src/css/style.css'])                      
+                    './vendor/owl/css/owl.css'])                      
     //pipe  são os tratamentos dos arquivos
-        .pipe(concat('styles.css'))
+        .pipe(concat('libs.css'))
         .pipe(cssmin())         // não precisa de parâmetro, a propria função faz a mimificação de todos os arquivos
         .pipe(rename({ suffix: '.min'})) //libs.min.css
-        .pipe(gulp.dest('./dist/myCSS'))  
+        .pipe(gulp.dest('./dist/myCSS/'))  
     //  vai pegas os arquivos 'aqui' e vou direcionar para um nome destinho 'mesmo que não existe, ele cria' 
     //dist é o meu diretório de produção, ou seja, o que será publicado quando meu projeto estiver pronto para subir para o servidor
    return callback()
 }
+function tarefasSASS( callback) {
+  return gulp.src('./src/sass/**/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./dist/css'));
+
+    return callback()
+}
+
+
 function tarefasJS(callback){
      gulp.src(['./node_modules/jquery/dist/jquery.js',
                     './node_modules/bootstrap/dist/js/bootstrap.js',
@@ -81,12 +90,19 @@ function end(callback){
   console.log('tarefas concluidas com sucesso!!!')
   return callback()
 }
-const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImages, end)
+const process = series(tarefasCSS, tarefasJS, tarefasHTML, tarefasImages, tarefasSASS, end)
 
 exports.styles = tarefasCSS
+exports.buildStyles = tarefasSASS
 exports.scripts = tarefasJS
 exports.images = tarefasImages
 exports.htmls = tarefasHTML
 
 
 exports.default = process
+
+
+
+
+
+
