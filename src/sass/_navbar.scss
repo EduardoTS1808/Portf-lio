@@ -1,13 +1,10 @@
 
 .navbar{
 	background: transparent;
-	// background-color: #0047BA;
-	border-bottom: .2rem solid rgba(0,0,0,.3);
-	margin-bottom: 1rem;
+	border-bottom: $border-botton;
 }
 .navbar-collapse{
 	flex-grow: 0;
-	
 	.navbar-toggler-icon{
 		color: #fff;
 	}
@@ -21,10 +18,6 @@
 		color:$color-Primaria;
 		margin-right: 5rem;
 		cursor: pointer;
-		&:hover {
-			color:#fff;
-			// color: $color-Ternario;
-		}
 	
 	}
 }

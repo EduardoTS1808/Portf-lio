@@ -65,18 +65,21 @@
 		font-size: 50%
 	}
 	.banner {
-		height: 16rem;
+		height: 20rem;
 		padding: 70px 70px;
 	}
-	.featured-item {
-		height:400px;
+	.owl-carousel{
+		.owl-next.active {
+			display: flex;
+		}
+		.owl-dots.active{
+			display: flex;
+		}
 	}
-	.featured-item .img-item {
-		// height: 22rem;
-	}
+
 	.featured-item .img-item img{
-		height: auto;
-	}
+			height: auto;
+		}
 	.card{
 		width: 270px;
 	}

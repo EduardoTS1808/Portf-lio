@@ -8,17 +8,17 @@
 	display: flex;
 	padding: 1rem;
 	border: none;
-	top: 79%;
+	top: 88%;
 	z-index: 1000;
 	left: 80%;
 	border-radius: 2rem;
 	position: sticky;
+	box-shadow: $box-shadow-hover;
 	i{
 		font-size: 4.5rem;
-		
 	}
-	&:hover{
-		// box-shadow: .5rem .8rem 2rem  rgba(0,0,0,.3);
-		box-shadow: $box-shadow-hover;
-	}
+	// &:hover{
+	// 	// box-shadow: .5rem .8rem 2rem  rgba(0,0,0,.3);
+	// 	box-shadow: $box-shadow-hover;
+	// }
 }

@@ -45,7 +45,7 @@ owl.owlCarousel({
             nav:true,
         },
         1200:{
-            items:4,
+            items:5,
             nav:true,
         }
     }
@@ -90,6 +90,9 @@ $('.nav-modal-open').on('click', function(e){
    });
 
 //////////////////
+
+
+
 const myCarousel = $('#carouselExampleFade');
 const carousel = new bootstrap.Carousel(myCarousel, {
      interval: 5000,

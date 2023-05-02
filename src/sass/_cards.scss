@@ -1,101 +1,99 @@
-.card{
-	width: 25rem;
-	height: 100%;
-	margin: 0;
-	border: .2rem solid rgba(255,255,255, .9);
-	border-radius: 2rem	;
-	background: #e9e9e9;
-
-	
+@import 'reset';
+.Produtos{
+	@include sections;
 	.title-container{
-		width: fit-content;
-		padding: 1rem;
-		border-radius: 1.5rem ;
-		box-shadow:  5px 10px 30px rgba(0,0,0, .5);
-		margin-bottom: 2rem;
-		h2{
-			margin-bottom: 0;
-			color:$color-Primaria;
-			text-transform: uppercase;
-		}
-		
+		@extend %title-container;
 	}
-	
 
-	.icon-info{
-		position: absolute;
-		display: inline-flex;
-		justify-content: end;
-		right: 1rem;
+	.card{
+		width: 20rem;
+		height: 100%;
+		margin: 0;
 		padding: 1rem;
-		cursor: pointer;
-		i{
-			font-size: 2rem;
-			color:#cccccc;
-		}
+		border: .2rem solid $color-Primaria;
+		border-radius: 2rem	;
+		background: #eee;
 	
-	}
-	&:hover{
-        transition: $hover-transition;
-        box-shadow: $box-shadow-hover;
-		background: #fff;
-	}
-	.descricao-produtos {
+		.icon-info{
 			position: absolute;
-			display: flex;
-			opacity: 0;
-			right: 0;
-			width: 14rem;
-			background: #fff;
-			border-radius: 10px;
-			transition: .2s linear;
-			&:hover{
-				opacity: 1;
-                background: #c1dcff ;
+			display: inline-flex;
+			justify-content: end;
+			right: 1rem;
+			padding: 1rem;
+			cursor: pointer;
+			i{
+				font-size: 2rem;
+				color:#cccccc;
 			}
-			.dropdown {
-				.dropdown-item {
-					text-align: start;
-					i{
-						font-size: 2rem;
-						color:$color-Primaria;
-						margin-bottom: .5rem;
+		
+		}
+		&:hover{
+			transition: $hover-transition;
+			box-shadow: $box-shadow-hover;
+			background: #fff;
+		}
+		.descricao-produtos {
+				position: absolute;
+				display: flex;
+				opacity: 0;
+				right: 0;
+				width: 14rem;
+				background: #fff;
+				border-radius: 10px;
+				transition: .2s linear;
+				&:hover{
+					opacity: 1;
+					// background: #c1dcff ;
+					background: rgba(255,255,255, .7);
+				}
+				.dropdown {
+					.dropdown-item {
+						text-align: start;
+						i{
+							font-size: 2rem;
+							color:$color-Primaria;
+							margin-bottom: .5rem;
+						}
 					}
 				}
 			}
-		}
-	img{
-		max-height: 200px;
-		min-height: 190px;
-		object-fit: scale-down;
-		padding: .2rem;
-		}
-	.card-body{
-		padding: .5rem;
-		}
-	
-	button{
-		margin-top: 2rem;
-		border-radius: 1rem;
-		}
-	.container-descricoes{
-		height: auto;
-		margin-top: 1rem;
-		
-		.nome-produto{
-			min-height: 45px;
-			color:$black;
+		img{
+			max-height: 150px;
+			min-height: 160px;
+			object-fit: scale-down;
+			padding: .2rem;
+				&:hover{
+					padding: 0;
+				}
+			}
+		.card-body{
 			padding: .5rem;
+			p{
+				font-size: 1.2rem ;
+				line-height: 1.2rem;
+				margin-bottom: .5rem;
+				font-weight: 600;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 20rem;
+
 			}
-		.preco{
-			font-size: 2rem;
-			color:$color-Primaria;
-			font-weight: 600;
-			margin-bottom: 1rem;
-			border-radius: 2rem;
-			padding: .2rem .3rem;
-			border: .1rem solid #3aaaf5;
-			cursor: pointer;
+			.preco-anterior{
+					text-decoration: line-through;
 			}
+			}
+			h4{
+				margin-bottom: 1rem;
+
+			}
+			.btn{
+				font-size: 1.4rem;
+				// margin: 1rem 33%;
+				border: none;
+				background: $color-Primaria;
+			}
+		
+	
 	}
 }

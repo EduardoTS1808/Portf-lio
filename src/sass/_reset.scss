@@ -6,10 +6,17 @@
 html{
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 10px;
+	scroll-padding-top: 0;
 }
 body {
-	background: $bg-page;
+	background: $black-liht;
+}
+@mixin sections() {
+	width: 100%;
+	border-bottom: $border-botton;
+	padding: 1rem 2rem;
+	padding-bottom: 2rem;
+	
 }
 p {
 	margin-bottom: 0px;
@@ -74,4 +81,17 @@ img{
 }
 .invalid{
 	border-color:  #f00;
+}
+%title-container{
+	width: fit-content;
+	padding: 1rem;
+	border-radius: 1.5rem ;
+	box-shadow:  5px 10px 30px rgba(0,0,0, .5);
+	margin: 2rem 0 2rem;
+	background: $bg-buttom;
+	h2{
+		color:$color-Primaria;
+		text-transform: uppercase;
+	}
+	
 }
