@@ -34,7 +34,7 @@ function tarefasSASS(cb) {
 }
 
 function tarefasBootstrapIcons(cb){
-  gulp.src(['./node_modules/bootstrap-icons/icons/*.svg'])
+  gulp.src(['./node_modules/bootstrap-icons/font/bootstrap-icons.css'])
     .pipe(gulp.dest('./dist/icons'));
 
     cb()
@@ -97,7 +97,7 @@ function end(callback){
   console.log('tarefas concluidas com sucesso!!!')
   return callback()
 }
-const process = parallel(tarefasCSS,  tarefasSASS, tarefasJS, tarefasHTML, tarefasImages, tarefasBootstrapIcons, end)
+const process = parallel(tarefasCSS,  tarefasSASS, tarefasJS, tarefasHTML, tarefasImages,  end)
 
 exports.styles = tarefasCSS
 exports.sass = tarefasSASS

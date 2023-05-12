@@ -1,51 +1,58 @@
+@use "sass:math";
 @import 'reset';
 .Produtos{
 	@include sections;
+
+	// max-width: math.div(600px, 770px) * 100% / 3;
+
+
+	
+
+
+
+
+
+
+
 	.title-container{
 		@extend %title-container;
 	}
 
 	.card{
-		width: 20rem;
+		position: relative;
+		max-width: math.div(410px, 1400)  $width-card;
 		height: 100%;
 		margin: 0;
 		padding: 1rem;
+		align-items: center;
 		border: .2rem solid $color-Primaria;
-		border-radius: 2rem	;
+		border-radius: 1.2rem	;
 		background: #eee;
-	
-		.icon-info{
-			position: absolute;
-			display: inline-flex;
-			justify-content: end;
-			right: 1rem;
-			padding: 1rem;
-			cursor: pointer;
-			i{
-				font-size: 2rem;
-				color:#cccccc;
-			}
-		
-		}
-		&:hover{
-			transition: $hover-transition;
+		&:hover  {
 			box-shadow: $box-shadow-hover;
 			background: #fff;
+		
 		}
+		&:hover  .descricao-produtos {
+				
+			width: 60%;
+			left: 40%;
+		}
+
+		@media (max-width:419px){
+			width: 300px;
+		}
+
 		.descricao-produtos {
 				position: absolute;
-				display: flex;
-				opacity: 0;
+				left: 100%;
 				right: 0;
-				width: 14rem;
+				width: 0;
+				overflow: hidden;
 				background: #fff;
 				border-radius: 10px;
-				transition: .2s linear;
-				&:hover{
-					opacity: 1;
-					// background: #c1dcff ;
-					background: rgba(255,255,255, .7);
-				}
+				transition: .5s ease;
+				white-space: nowrap;
 				.dropdown {
 					.dropdown-item {
 						text-align: start;
@@ -58,14 +65,18 @@
 				}
 			}
 		img{
+			display: block;
 			max-height: 150px;
 			min-height: 160px;
 			object-fit: scale-down;
 			padding: .2rem;
+			
 				&:hover{
 					padding: 0;
 				}
+				
 			}
+		
 		.card-body{
 			padding: .5rem;
 			p{
@@ -89,7 +100,6 @@
 			}
 			.btn{
 				font-size: 1.4rem;
-				// margin: 1rem 33%;
 				border: none;
 				background: $color-Primaria;
 			}

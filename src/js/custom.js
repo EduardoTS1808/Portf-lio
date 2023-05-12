@@ -17,8 +17,6 @@ jQuery( function($){
 
 
 
-
-
 let owl = $('.owl-carousel');
 owl.owlCarousel({
     center:true,
