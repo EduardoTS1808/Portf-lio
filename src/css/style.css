@@ -66,7 +66,7 @@ img {
   border-color: #f00;
 }
 
-.Produtos .title-container, .featured .title-container {
+.Produtos .title__container, .featured .title__container {
   width: fit-content;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -74,7 +74,7 @@ img {
   margin: 2rem 0 2rem;
   background: rgba(255, 255, 255, 0.9);
 }
-.Produtos .title-container h2, .featured .title-container h2 {
+.Produtos .title__container h2, .featured .title__container h2 {
   color: #011E41;
   text-transform: uppercase;
 }
@@ -94,15 +94,15 @@ img {
 .navbar__container .navbar__button .navbar__icon {
   color: #fff;
 }
-.navbar__container .navbar__list {
+.navbar__container .navbar-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar__container .navbar__list .nav__item {
+.navbar__container .navbar-nav .navbar__item {
   padding-left: 0.7rem;
 }
-.navbar__container .navbar__list .nav__item .nav__link {
+.navbar__container .navbar-nav .navbar__item .nav__link {
   font-weight: 900;
   font-size: 1.5rem;
   color: #011E41;
@@ -203,7 +203,7 @@ img {
   border-color: #f00;
 }
 
-.Produtos .title-container, .featured .title-container {
+.Produtos .title__container, .featured .title__container {
   width: fit-content;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -211,7 +211,7 @@ img {
   margin: 2rem 0 2rem;
   background: rgba(255, 255, 255, 0.9);
 }
-.Produtos .title-container h2, .featured .title-container h2 {
+.Produtos .title__container h2, .featured .title__container h2 {
   color: #011E41;
   text-transform: uppercase;
 }
@@ -249,7 +249,8 @@ img {
 .featured .owl-carousel .owl-stage:hover > :not(.owl-item:hover) {
   opacity: 0.4;
 }
-.featured .featured-item {
+.featured .featured__item {
+  height: 414px;
   margin-bottom: 20px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
@@ -257,22 +258,22 @@ img {
   cursor: pointer;
   transition: 0.3s;
 }
-.featured .featured-item:hover {
+.featured .featured__item:hover {
   transition: all 0.5s;
   box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.3);
 }
-.featured .featured-item .title {
+.featured .featured__item .title {
   color: #011E41;
 }
-.featured .featured-item .img-item {
+.featured .featured__item .img__item {
   height: 280px;
   width: 100%;
 }
-.featured .featured-item .img-item img {
+.featured .featured__item .img__item img {
   height: 300px;
   object-fit: scale-down;
 }
-.featured .featured-item .descricao {
+.featured .featured__item .descricao--hover {
   position: absolute;
   opacity: 0;
   display: flex;
@@ -282,31 +283,31 @@ img {
   border-radius: 10px;
   transition: 0.2s linear;
 }
-.featured .featured-item .descricao:hover {
+.featured .featured__item .descricao--hover:hover {
   opacity: 1;
   background: rgba(255, 255, 255, 0.7);
 }
-.featured .featured-item .descricao .dropdown .dropdown-item {
+.featured .featured__item .descricao--hover .dropdown .dropdown-item {
   text-align: start;
   color: #000;
 }
-.featured .featured-item .descricao .dropdown .dropdown-item i {
+.featured .featured__item .descricao--hover .dropdown .dropdown-item i {
   font-size: 2rem;
   color: #000;
   margin-bottom: 0.5rem;
 }
-.featured .featured-item .container-descricoes .nome-produto {
+.featured .featured__item .item__descricoes .-item__nome {
   display: none;
   color: #000;
   padding: 0.5rem;
 }
-.featured .featured-item .container-descricoes .preco {
+.featured .featured__item .item__descricoes .item__preco {
   font-size: 2rem;
   color: #011E41;
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.featured .featured-item .container-descricoes .preco span {
+.featured .featured__item .item__descricoes .item__preco span {
   color: #099955;
   font-size: 1.2rem;
   border-bottom: 0.2rem solid #099944;
@@ -381,7 +382,7 @@ img {
   border-color: #f00;
 }
 
-.Produtos .title-container, .featured .title-container {
+.Produtos .title__container, .featured .title__container {
   width: fit-content;
   padding: 1rem;
   border-radius: 1.5rem;
@@ -389,7 +390,7 @@ img {
   margin: 2rem 0 2rem;
   background: rgba(255, 255, 255, 0.9);
 }
-.Produtos .title-container h2, .featured .title-container h2 {
+.Produtos .title__container h2, .featured .title__container h2 {
   color: #011E41;
   text-transform: uppercase;
 }
@@ -415,7 +416,7 @@ img {
   box-shadow: 7px 8px 10px rgba(0, 0, 0, 0.3);
   background: #fff;
 }
-.Produtos .card:hover .descricao-produtos {
+.Produtos .card:hover .card__descricao--hover {
   width: 60%;
   left: 40%;
 }
@@ -424,7 +425,7 @@ img {
     width: 300px;
   }
 }
-.Produtos .card .descricao-produtos {
+.Produtos .card .card__descricao--hover {
   position: absolute;
   left: 100%;
   right: 0;
@@ -435,10 +436,10 @@ img {
   transition: 0.5s ease;
   white-space: nowrap;
 }
-.Produtos .card .descricao-produtos .dropdown .dropdown-item {
+.Produtos .card .card__descricao--hover .dropdown .dropdown-item {
   text-align: start;
 }
-.Produtos .card .descricao-produtos .dropdown .dropdown-item i {
+.Produtos .card .card__descricao--hover .dropdown .dropdown-item i {
   font-size: 2rem;
   color: #011E41;
   margin-bottom: 0.5rem;
@@ -466,13 +467,13 @@ img {
   text-overflow: ellipsis;
   max-width: 20rem;
 }
-.Produtos .card .card-body .preco-anterior {
+.Produtos .card .card-body .Off {
   text-decoration: line-through;
 }
-.Produtos .card h4 {
+.Produtos .card .on {
   margin-bottom: 1rem;
 }
-.Produtos .card .btn {
+.Produtos .card .card__btn {
   font-size: 1.4rem;
   border: none;
   background: #011E41;
@@ -495,34 +496,32 @@ img {
   list-style: none;
   display: inline-block;
 }
-.footer .logo img {
+.footer .footer__logo img {
   max-width: 100%;
-  margin-top: 60px;
+}
+.footer .footer__menu {
   margin-bottom: 40px;
 }
-.footer .footer-menu {
-  margin-bottom: 40px;
-}
-.footer .footer-menu ul li {
+.footer .footer__menu ul li {
   margin: 0px 15px;
 }
-.footer .footer-menu ul li a {
+.footer .footer__menu ul li a {
   font-size: 1.5rem;
   color: #011E41;
   text-transform: uppercase;
   transition: all 0.5s;
 }
-.footer .footer-menu ul li a:hover {
+.footer .footer__menu ul li a:hover {
   color: #E5E1E6;
   text-decoration: none;
 }
-.footer .social-icons {
+.footer .social__icons {
   margin-bottom: 60px;
 }
-.footer .social-icons ul li {
+.footer .social__icons ul li {
   margin: 0px 10px;
 }
-.footer .social-icons ul li a {
+.footer .social__icons ul li a {
   width: 32px;
   height: 32px;
   color: #fff;
@@ -535,7 +534,7 @@ img {
   transition: all 0.5s;
   transition: all 0.5s;
 }
-.footer .social-icons ul li a:hover {
+.footer .social__icons ul li a:hover {
   background-color: #3a8bcd;
 }
 

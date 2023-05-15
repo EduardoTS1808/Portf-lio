@@ -6,7 +6,7 @@
     background: $bg-page;
     flex-wrap: wrap;
     
-    .title-container{
+    .title__container{
         @extend %title-container;
     }
  
@@ -38,7 +38,8 @@
                         // deixa fosco os intem em que o mouse não está em cima
                     }
                 }
-                .featured-item {
+                .featured__item {
+                    height: 414px;
                     margin-bottom: 20px;
                     border: 2px solid rgba(0,0,0, .2);
                     padding: 10px;
@@ -52,7 +53,7 @@
                     .title{
                         color:$color-Primaria;
                     }
-                    .img-item  {
+                    .img__item  {
                         height: 280px;
                         width: 100%;
                         img{
@@ -62,7 +63,7 @@
                         }
                         
                     }
-                    .descricao{
+                    .descricao--hover{
                         position: absolute;
                         opacity: 0;
                         display: flex;
@@ -96,13 +97,13 @@
                         }
                         
                     }
-                    .container-descricoes{
-                        .nome-produto{
+                    .item__descricoes{
+                        .-item__nome{
                             display: none;
                             color:$black;
                             padding: .5rem;
                         }
-                        .preco{
+                        .item__preco{
                             font-size: 2rem;
                             color:$color-Primaria;
                             font-weight: 600;

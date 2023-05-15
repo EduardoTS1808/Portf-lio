@@ -14,7 +14,7 @@
 
 
 
-	.title-container{
+	.title__container{
 		@extend %title-container;
 	}
 
@@ -33,7 +33,7 @@
 			background: #fff;
 		
 		}
-		&:hover  .descricao-produtos {
+		&:hover  .card__descricao--hover {
 				
 			width: 60%;
 			left: 40%;
@@ -43,7 +43,7 @@
 			width: 300px;
 		}
 
-		.descricao-produtos {
+		.card__descricao--hover {
 				position: absolute;
 				left: 100%;
 				right: 0;
@@ -79,26 +79,27 @@
 		
 		.card-body{
 			padding: .5rem;
-			p{
-				font-size: 1.2rem ;
-				line-height: 1.2rem;
-				margin-bottom: .5rem;
-				font-weight: 600;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				max-width: 20rem;
+				 p{
+					font-size: 1.2rem ;
+					line-height: 1.2rem;
+					margin-bottom: .5rem;
+					font-weight: 600;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					max-width: 20rem;
 
-			}
-			.preco-anterior{
+				}
+				.Off{
 					text-decoration: line-through;
+				}
+		
 			}
-			}
-			h4{
+			.on{
 				margin-bottom: 1rem;
 
 			}
-			.btn{
+			.card__btn{
 				font-size: 1.4rem;
 				border: none;
 				background: $color-Primaria;
